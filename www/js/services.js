@@ -35,10 +35,7 @@ angular.module('starter.services', [])
     all: function() {
       return speakers;
     },
-    remove: function(speaker) {
-      speakers.splice(speakers.indexOf(speaker), 1);
-    },
-    get: function(speakerId) {
+    get: function(speakers,speakerId) {
       for (var i = 0; i < speakers.length; i++) {
         if (speakers[i].id === parseInt(speakerId)) {
           return speakers[i];
@@ -47,4 +44,39 @@ angular.module('starter.services', [])
       return null;
     }
   };
-});
+})
+.factory('Sessions', ['$http',function($http) {
+  
+return {
+  getSessions : function() {
+    return $http({
+      url: "https://crossorigin.me/http://www.fladotnet.com/flanetdata/api/ccconsolidated",
+      dataType: "xml",
+      method: 'GET'
+    }) // return $http
+  }, //getSession
+  get : function(sessionsArr,sessionID)
+  {
+        for (var i = 0; i < sessionsArr.length; i++) {
+        if (sessionsArr[i].SessionID === parseInt(sessionID)) {
+          return sessionsArr[i];
+        }
+      }
+      return null;
+  }
+} // return
+
+}]); // factory
+
+      
+
+      
+
+		
+	
+
+
+
+
+
+

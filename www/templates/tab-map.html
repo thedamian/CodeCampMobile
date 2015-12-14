@@ -1,12 +1,23 @@
 <ion-view view-title="Map">
   <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable See Location
-    </ion-toggle>
-    </ion-list>
+<div class="list">
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Floor
+    </div>
+    <select id="floorSelected" onchange="floorSelect()">
+      <option selected>1 </option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+    </select>
+  </label>
+
+</div>
     <div id="floorsplan">
-      <img src="maps\firstFloor.png">
+      <img id="floorsplanmap" src="maps\Floor1.png">
     </div>
   </ion-content>
 </ion-view>

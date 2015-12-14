@@ -49,7 +49,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-
+  .state('tab.schedule-details', {
+    url: '/session/:sessionId',
+    views: {
+      'tab-schedule-details': {
+        templateUrl: 'templates/session-detail.html',
+        controller: 'SessionDetailCtrl'
+      }
+    }
+  })
   .state('tab.speakers', {
       url: '/speakers',
       views: {
@@ -83,3 +91,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $urlRouterProvider.otherwise('/tab/schedule');
 
 });
+
+
+function floorSelect() {
+
+     var floorSelected = $("#floorSelected").val();
+
+    $("#floorsplanmap").attr('src',"maps/Floor" + floorSelected + ".png");
+
+}

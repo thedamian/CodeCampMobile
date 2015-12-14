@@ -1,28 +1,24 @@
-<ion-view view-title="Schedule">
-  <ion-content class="padding">
-    <div class="list card">
-      <div class="item item-divider">Schedules</div>
-      <div class="item item-body">
-        <div>
-          There is a fire in <b>sector 3</b>
-        </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Health</div>
-      <div class="item item-body">
-        <div>
-          You ate an apple today!
-        </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Upcoming</div>
-      <div class="item item-body">
-        <div>
-          You have <b>29</b> meetings on your calendar tomorrow.
-        </div>
-      </div>
-    </div>
+<ion-view view-title="Code Camp Schedule">
+  <ion-content>
+    
+    <select name="SessionTrackSelected" id="SessionTrackSelected"
+      ng-model="SessionTrackSelected" ng-options="o as o for o in sessionTracks">
+      </select>
+   
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="session in sessions| filter: session.SessionTracks=SessionTrackSelected" type="item-text-wrap" href="#/tab/session/{{session.SessionID}}">
+        <img ng-src="{{session.SpeakerImage}}" onerror="this.src='images/NoProfilePic.jpg';">
+        <h2>{{session.SessionTracks}}</h2>
+        <p>{{session.SpeakerName}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="bookmark(session)">
+          Bookmark
+        </ion-option-button>
+        
+      </ion-item>
+    </ion-list>
+
   </ion-content>
 </ion-view>
+
