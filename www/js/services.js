@@ -57,11 +57,13 @@ return {
   }, //getSession
   get : function(sessionsArr,sessionID)
   {
+    console.log("trying");
         for (var i = 0; i < sessionsArr.length; i++) {
         if (sessionsArr[i].SessionID === parseInt(sessionID)) {
           return sessionsArr[i];
         }
       }
+      console.log("oops");
       return null;
   }
 } // return

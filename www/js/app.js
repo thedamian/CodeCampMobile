@@ -50,11 +50,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
   .state('tab.schedule-details', {
-    url: '/session/:sessionId',
+    url: '/schedule/:sessionId',
     views: {
-      'tab-schedule-details': {
-        templateUrl: 'templates/session-detail.html',
-        controller: 'SessionDetailCtrl'
+      'tab-schedule': {
+        templateUrl: 'templates/schedule-detail.html',
+        controller: 'ScheduleDetailCtrl'
       }
     }
   })
@@ -83,6 +83,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-map': {
         templateUrl: 'templates/tab-map.html',
         controller: 'MapCtrl'
+      }
+    }
+  })
+    .state('tab.social', {
+    url: '/social',
+    views: {
+      'tab-social': {
+        templateUrl: 'templates/tab-social.html',
+        controller: 'socialCtrl'
       }
     }
   });

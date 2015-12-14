@@ -76,6 +76,7 @@ angular.module('starter.controllers', [])
           //console.dir(SessionTracks);
       });
 })
+
 .controller('SpeakersCtrl', function($rootScope,$scope, Speakers) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -93,12 +94,15 @@ angular.module('starter.controllers', [])
   $scope.speakers = Speakers.get($stateParams.speakerId);
 })
 
-.controller('SessionDetailCtrl', function($scope, $stateParams, Session) {
-  $scope.speaker = Session.get($scope.sessions,$stateParams.sessionId);
+.controller('ScheduleDetailCtrl', function($scope, $stateParams, Session) {
+  console.log("details");
+  $scope.session = Session.get($scope.sessions,$stateParams.sessionId);
   
 })
-
 .controller('MapCtrl', function($scope) {
+
+})
+.controller('SocialCtrl', function($scope) {
 
 });
 
