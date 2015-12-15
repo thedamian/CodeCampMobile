@@ -1,5 +1,18 @@
 var SessionsObj = [];
 var SpeakersObj = [];
+var TimeSlotsObj = [
+                    {TimeSlotID:1,TimeShow:"7:30 - Registration"},
+                    {TimeSlotID:2,TimeShow:"8:00 - Keynote"},
+                    {TimeSlotID:3,TimeShow:"8:30am-9:40am"},
+                    {TimeSlotID:4,TimeShow:"9:50am-11:05am"},
+                    {TimeSlotID:5,TimeShow:"11:10am-12:15pm"},
+                    {TimeSlotID:6,TimeShow:"12:20pm-1:15pm"},
+                    {TimeSlotID:7,TimeShow:"1:20pm-2:35pm"},
+                    {TimeSlotID:8,TimeShow:"2:40pm-3:50pm"},
+                    {TimeSlotID:9,TimeShow:"4:00pm-5:15pm"},
+                    {TimeSlotID:10,TimeShow:"5:20pm-6:00pm"}];
+                    
+
 
 angular.module('starter.controllers', [])
 
@@ -21,6 +34,7 @@ angular.module('starter.controllers', [])
           $SessionDescription = $(this).find("SessionDescription").text().trim();
           $SpeakerName = $(this).find("SpeakerName").text().trim();
           $SpeakerID = $(this).find("SpeakerID").text().trim();
+          $TimeSlotID = $(this).find("TimeSlotID").text().trim();
           $SpeakerWebSite = $(this).find("SpeakerWebSite").text().trim();
           $SpeakerImage = $(this).find("SpeakerImage").text().trim();
           $RoomName = $(this).find("RoomName").text().trim();
@@ -66,18 +80,22 @@ angular.module('starter.controllers', [])
               SpeakerImage:$SpeakerImage,
               RoomName:$RoomName,
               RoomNumber:$RoomNumber,
-              SessionTracks: $SessionTrack
+              SessionTracks: $SessionTrack,
+              TimeSlotID: $TimeSlotID
             });
            
             
          }); // find each CCConsolidated
            SessionsObj = sessionObj;
            $scope.sessions = sessionObj;
+           SpeakersObj = Speakers;
            $rootScope.speakers = Speakers;
            $scope.sessionTracks = SessionTracks;
-           $scope.SessionTrackSelected = SessionTracks[0];
-          //console.dir(Speakers);
-          //console.dir(SessionTracks);
+           //$scope.SessionTrackSelected = SessionTracks[0];
+           $scope.TimeSlots = TimeSlotsObj;
+           $scope.TimeSelected = TimeSlotsObj[0];
+          console.dir(sessionObj);
+          console.dir(TimeSlotsObj[0]);
       });
 })
 
@@ -96,11 +114,11 @@ angular.module('starter.controllers', [])
 
 .controller('SpeakersDetailCtrl', function($scope, $stateParams, Speakers) {
   console.dir(SpeakersObj)
-  $scope.speaker = Speakers.get(SpeakersObj,$stateParams.speakerId);
+  $scope.speaker = SpeakersObj[SpeakersObj.map(function(e) { return e.id}).indexOf($stateParams.speakerId)];
 })
 
 .controller('ScheduleDetailCtrl', function($scope, $stateParams, Sessions) {
- console.dir(SessionsObj);
+// console.dir(SessionsObj);
   $scope.session = Sessions.get(SessionsObj,$stateParams.sessionId);
   
 })

@@ -10,11 +10,21 @@
       </select>
    </label>
    
+   <label class="item item-input item-select">
+     <div class="input-label">
+      Time
+    </div>
+     <select name="TimeSelected1" id="TimeSelected1"
+      ng-model="TimeSelected" ng-options="o as o.TimeShow for o in TimeSlots track by o.TimeSlotID">
+      </select>
+   </label>
+   
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="session in sessions| filter: session.SessionTracks=SessionTrackSelected" type="item-text-wrap" href="#/tab/session/{{session.SessionID}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="session in sessions | filter:session.TimeSlotID=TimeSelected.TimeSlotID|filter:session.SessionTracks=SessionTrackSelected" type="item-text-wrap" href="#/tab/session/{{session.SessionID}}">
         <img ng-src="{{session.SpeakerImage}}" onerror="this.src='images/NoProfilePic.jpg';">
         <h2>{{session.SessionTracks}}</h2>
         <p>{{session.SpeakerName}}</p>
+        time: {{session.TimeSlotID}}
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="bookmark(session)">

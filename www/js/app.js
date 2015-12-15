@@ -102,6 +102,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 });
 
 
+$( document ).ready(function() {
+  $("mapButton").on("click",function() {
+  FoorTOSelect($this.attr("id"));
+  });
+});
+
 function FoorTOSelect(floorVar) {
   console.log(floorVar);
     $("#floorsplanmap").attr('src',"maps/Floor" + floorVar + ".png");
