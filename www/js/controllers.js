@@ -1,3 +1,6 @@
+var SessionsObj = [];
+var SpeakersObj = [];
+
 angular.module('starter.controllers', [])
 
 .controller('ScheduleCtrl', function($rootScope,$scope,$http,Sessions) {
@@ -68,6 +71,7 @@ angular.module('starter.controllers', [])
            
             
          }); // find each CCConsolidated
+           SessionsObj = sessionObj;
            $scope.sessions = sessionObj;
            $rootScope.speakers = Speakers;
            $scope.sessionTracks = SessionTracks;
@@ -91,12 +95,13 @@ angular.module('starter.controllers', [])
 })
 
 .controller('SpeakersDetailCtrl', function($scope, $stateParams, Speakers) {
-  $scope.speakers = Speakers.get($stateParams.speakerId);
+  console.dir(SpeakersObj)
+  $scope.speaker = Speakers.get(SpeakersObj,$stateParams.speakerId);
 })
 
-.controller('ScheduleDetailCtrl', function($scope, $stateParams, Session) {
-  console.log("details");
-  $scope.session = Session.get($scope.sessions,$stateParams.sessionId);
+.controller('ScheduleDetailCtrl', function($scope, $stateParams, Sessions) {
+ console.dir(SessionsObj);
+  $scope.session = Sessions.get(SessionsObj,$stateParams.sessionId);
   
 })
 .controller('MapCtrl', function($scope) {

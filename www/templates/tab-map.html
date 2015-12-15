@@ -2,15 +2,18 @@
   <ion-content>
 <div class="list">
   <label class="item item-input item-select">
-    <div class="input-label">
-      Floor
-    </div>
-    <select id="floorSelected" onchange="floorSelect()">
-      <option selected>1 </option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-    </select>
+    <button class="button button-dark" onclick='FoorTOSelect("1");'>
+      Floor 1
+    </button>
+    <button class="button button-dark" onclick='FoorTOSelect("2");'>
+      Floor 2
+    </button>
+    <button class="button button-dark" onclick="FoorTOSelect('3');">
+      Floor 3
+    </button>
+    <button  class="button button-dark" onclick="FoorTOSelect('4');">
+    Floor 4
+    </button>
   </label>
 
 </div>

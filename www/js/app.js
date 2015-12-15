@@ -50,7 +50,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
   .state('tab.schedule-details', {
-    url: '/schedule/:sessionId',
+    url: '/session/:sessionId',
     views: {
       'tab-schedule': {
         templateUrl: 'templates/schedule-detail.html',
@@ -102,10 +102,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 });
 
 
-function floorSelect() {
-
-     var floorSelected = $("#floorSelected").val();
-
-    $("#floorsplanmap").attr('src',"maps/Floor" + floorSelected + ".png");
+function FoorTOSelect(floorVar) {
+  console.log(floorVar);
+    $("#floorsplanmap").attr('src',"maps/Floor" + floorVar + ".png");
 
 }

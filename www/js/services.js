@@ -2,46 +2,10 @@ angular.module('starter.services', [])
 
 .factory('Speakers', function() {
   // Might use a resource here that returns a JSON array
-
-  // Some fake testing data
-  var speakers = [{
-    id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
-  }, {
-    id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
-  }, {
-    id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
-  }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
-  }];
-
   return {
-    all: function() {
-      return speakers;
-    },
-    get: function(speakers,speakerId) {
-      for (var i = 0; i < speakers.length; i++) {
-        if (speakers[i].id === parseInt(speakerId)) {
-          return speakers[i];
-        }
-      }
-      return null;
+      get : function(SpeakerArr,SpeakerID)
+    {
+    return SpeakerArr[SpeakerArr.map(function(e) { return e.id}).indexOf(SpeakerID)];
     }
   };
 })
@@ -57,14 +21,7 @@ return {
   }, //getSession
   get : function(sessionsArr,sessionID)
   {
-    console.log("trying");
-        for (var i = 0; i < sessionsArr.length; i++) {
-        if (sessionsArr[i].SessionID === parseInt(sessionID)) {
-          return sessionsArr[i];
-        }
-      }
-      console.log("oops");
-      return null;
+   return sessionsArr[sessionsArr.map(function(e) { return e.SessionID}).indexOf(sessionID)];
   }
 } // return
 

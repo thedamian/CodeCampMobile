@@ -2,10 +2,10 @@
   <ion-content class="padding">
 	  {{session.SessionDescription}}
     <p> 
-      Speaker: {{session.SpeakerName}}
+     <a href="#/tab/speakers/{{session.SpeakerID}}"> Speaker: {{session.SpeakerName}}</a>
 	  <img ng-src="{{session.SpeakerImage}}" style="width: 64px; height: 64px" align="right">
 	  {{session.SpeakerBio}}<BR>
-	  url:  {{session.SpeakerWebSite}}
+	  <div ng-show="session.SpeakerWebSite != ''">url:  {{session.SpeakerWebSite}}</div>
     </p>
   </ion-content>
 </ion-view>
