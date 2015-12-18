@@ -2,23 +2,24 @@
   <ion-content>
 <div class="list">
   <label class="item item-input item-select">
-    <button class="button button-dark mapButton" id="1">
+    <button class="button button-dark mapButton" id="1" ng-click="clickFloor(1)">
       Floor 1
     </button>
-    <button class="button button-dark mapButton" id="2"> 
+    <button class="button button-dark mapButton" id="2" ng-click="clickFloor(2)"> 
       Floor 2
     </button>
-    <button class="button button-dark mapButton" id="3">
+    <button class="button button-dark mapButton" id="3" ng-click="clickFloor(3)">
       Floor 3
     </button>
-    <button  class="button button-dark mapButton" id="4">
+    <button  class="button button-dark mapButton" id="4" ng-click="clickFloor(4)">
     Floor 4
     </button>
   </label>
 
 </div>
     <div id="floorsplan">
-      <img id="floorsplanmap" src="maps\Floor1.png">
+      {{floor}}
+      <img id="floorsplanmap"  src="maps\Floor{{floor}}.png">
     </div>
   </ion-content>
 </ion-view>

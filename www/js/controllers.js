@@ -123,9 +123,16 @@ angular.module('starter.controllers', [])
   
 })
 .controller('MapCtrl', function($scope) {
+ $scope.floor=1;
+ 
+ $scope.clickFloor = function(thisfloor) {
+    $scope.floor=thisfloor;
+    console.log(thisfloor);
+    $("#floorsplanmap").attr('src',"maps/Floor" + thisfloor + ".png");
+ };
 
 })
-.controller('SocialCtrl', function($scope) {
+.controller('socialCtrl', function($scope) {
 
 });
 
