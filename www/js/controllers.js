@@ -1,16 +1,16 @@
 var SessionsObj = [];
 var SpeakersObj = [];
 var TimeSlotsObj = [
-                    {TimeSlotID:1,TimeShow:"7:30 - Registration"},
-                    {TimeSlotID:2,TimeShow:"8:00 - Keynote"},
-                    {TimeSlotID:3,TimeShow:"8:30am-9:40am"},
-                    {TimeSlotID:4,TimeShow:"9:50am-11:05am"},
-                    {TimeSlotID:5,TimeShow:"11:10am-12:15pm"},
-                    {TimeSlotID:6,TimeShow:"12:20pm-1:15pm"},
-                    {TimeSlotID:7,TimeShow:"1:20pm-2:35pm"},
-                    {TimeSlotID:8,TimeShow:"2:40pm-3:50pm"},
-                    {TimeSlotID:9,TimeShow:"4:00pm-5:15pm"},
-                    {TimeSlotID:10,TimeShow:"5:20pm-6:00pm"}];
+                    {TimeSlotID:'1',TimeShow:"7:30 - Registration"},
+                    {TimeSlotID:'2',TimeShow:"8:00 - Keynote"},
+                    {TimeSlotID:'3',TimeShow:"8:30am-9:40am"},
+                    {TimeSlotID:'4',TimeShow:"9:50am-11:05am"},
+                    {TimeSlotID:'5',TimeShow:"11:10am-12:15pm"},
+                    {TimeSlotID:'6',TimeShow:"12:20pm-1:15pm"},
+                    {TimeSlotID:'7',TimeShow:"1:20pm-2:35pm"},
+                    {TimeSlotID:'8',TimeShow:"2:40pm-3:50pm"},
+                    {TimeSlotID:'9',TimeShow:"4:00pm-5:15pm"},
+                    {TimeSlotID:'10',TimeShow:"5:20pm-6:00pm"}];
                     
 
 

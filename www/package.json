@@ -1,0 +1,21 @@
+{
+  "name": "codecampmobile",
+  "version": "1.0.0",
+  "description": "The South Florica Code Camp Mobile App / Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://websocketdemo@codecampmobile.scm.azurewebsites.net:443/codecampmobile.git"
+  },
+  "keywords": [
+    "south",
+    "florida",
+    "code",
+    "camp"
+  ],
+  "author": "Damian Montero",
+  "license": "ISC"
+}
