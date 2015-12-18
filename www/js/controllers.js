@@ -128,8 +128,8 @@ angular.module('starter.controllers', [])
  
  $scope.clickFloor = function(thisfloor) {
     $scope.floor=thisfloor;
-    console.log(thisfloor);
-    $("#floorsplanmap").attr('src',"maps/Floor" + thisfloor + ".png");
+    //console.log(thisfloor);
+    //$("#floorsplanmap").attr('src',"maps/Floor" + thisfloor + ".png");
  };
 
 })
