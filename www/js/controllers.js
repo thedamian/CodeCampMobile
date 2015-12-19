@@ -90,13 +90,14 @@ angular.module('starter.controllers', [])
            SessionsObj = sessionObj;
            $scope.sessions = sessionObj;
            SpeakersObj = Speakers;
+           $scope.speakers = Speakers;
            $rootScope.speakers = Speakers;
            $scope.sessionTracks = SessionTracks;
-           //$scope.SessionTrackSelected = SessionTracks[0];
+           $scope.SessionTrackSelected = SessionTracks[0];
            $scope.TimeSlots = TimeSlotsObj;
            $scope.TimeSelected = TimeSlotsObj[0];
-          console.dir(sessionObj);
-          console.dir(TimeSlotsObj[0]);
+          //console.dir(sessionObj);
+          //console.dir(TimeSlotsObj[0]);
       });
 })
 
@@ -111,11 +112,14 @@ angular.module('starter.controllers', [])
 
   //$scope.speakers = Speakers.all();
  // $scope.speakers =$rootScope.speakers;
+  $scope.speakers = SpeakersObj;
 })
 
 .controller('SpeakersDetailCtrl', function($scope, $stateParams, Speakers) {
-  console.dir(SpeakersObj)
+  //console.dir(SpeakersObj);
+  //console.log($stateParams.speakerId);
   $scope.speaker = SpeakersObj[SpeakersObj.map(function(e) { return e.id}).indexOf($stateParams.speakerId)];
+  
 })
 
 .controller('ScheduleDetailCtrl', function($scope, $stateParams, Sessions) {
