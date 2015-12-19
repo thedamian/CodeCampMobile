@@ -17,10 +17,17 @@ var TimeSlotsObj = [
 
 angular.module('starter.controllers', [])
 
-.controller('ScheduleCtrl', function($rootScope,$scope,$http,Sessions) {
+.controller('ScheduleCtrl', function($rootScope,$scope,$http,Sessions,$ionicPopup) {
   $scope.sessions = [];
   $scope.speakers = [];
   $scope.sessionTracks = [];
+  
+ $scope.bookmark = function(thisSessionID) {
+     $ionicPopup.alert({
+       title: 'This Functionality isn\'t ready',
+       template: 'You will be able to bookmark in the future'
+     });
+   };
   
    Sessions.getSessions().success(function(data) {
       var sessionObj = [];
@@ -69,7 +76,6 @@ angular.module('starter.controllers', [])
             });
           }
           
-          
         sessionObj.push({
               SessionID:$SessionID,
               SessionStart:$SessionStart,
@@ -82,7 +88,8 @@ angular.module('starter.controllers', [])
               RoomName:$RoomName,
               RoomNumber:$RoomNumber,
               SessionTracks: $SessionTrack,
-              TimeSlotID: $TimeSlotID
+              TimeSlotID: $TimeSlotID,
+              TimeSlotText: TimeSlotsObj[TimeSlotsObj.map(function(e) { return e.TimeSlotID}).indexOf($TimeSlotID)].TimeShow
             });
            
             
@@ -101,7 +108,7 @@ angular.module('starter.controllers', [])
       });
 })
 
-.controller('SpeakersCtrl', function($rootScope,$scope, Speakers) {
+.controller('SpeakersCtrl', function($rootScope,$scope, Speakers,$ionicPopup) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -113,6 +120,14 @@ angular.module('starter.controllers', [])
   //$scope.speakers = Speakers.all();
  // $scope.speakers =$rootScope.speakers;
   $scope.speakers = SpeakersObj;
+  
+   $scope.bookmark = function(thisSessionID) {
+     $ionicPopup.alert({
+       title: 'This Functionality isn\'t ready',
+       template: 'You will be able to bookmark in the future'
+     });
+   };
+   
 })
 
 .controller('SpeakersDetailCtrl', function($scope, $stateParams, Speakers) {
