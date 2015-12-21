@@ -20,17 +20,18 @@
    </label>
    
     <ion-list> 
-    {{TimeSelected.TimeSlotID}} ---- {{SessionTrackSelected}}
       <ion-item class="item-remove-animate item-avatar item-icon-right" 
-      ng-repeat="session in sessions | filter:{TimeSlotID:TimeSelected.TimeSlotID}" 
+      ng-repeat="session in sessions | filter:{TimeSlotID:TimeSelected.TimeSlotID} | filter: {SessionTracks:SessionTrackSelected}" 
       type="item-text-wrap" href="#/tab/session/{{session.SessionID}}">
         <img ng-src="{{session.SpeakerImage}}" onerror="this.src='images/NoProfilePic.jpg';">
-        <h2>{{session.SessionTracks}}</h2>
-        <p>{{session.SpeakerName}}</p>
-        time: {{session.TimeSlotID}}
+        <h2>{{session.SessionName }}</h2>
+        <p>Track: {{session.SessionTracks}}</p>
+        <p>{{session.SessionDescription}}</p>
+        <p>Speaker: {{session.SpeakerName}}</p>
+        <p>Time: {{session.TimeSlotText}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
-        <ion-option-button class="button-assertive" ng-click="bookmark(session)">
+        <ion-option-button class="button-assertive" ng-click="bookmark(session.SessionID)">
           Bookmark
         </ion-option-button>
         

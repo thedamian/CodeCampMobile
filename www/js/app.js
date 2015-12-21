@@ -68,9 +68,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
     .state('tab.speakers-detail', {
-      url: '/speakers/:speakerId',
+      url: '/speaker/:speakerId',
       views: {
-        'tab-speaker': {
+        'tab-speakers': {
           templateUrl: 'templates/speaker-detail.html',
           controller: 'SpeakersDetailCtrl'
         }

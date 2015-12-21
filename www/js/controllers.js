@@ -17,14 +17,21 @@ var TimeSlotsObj = [
 
 angular.module('starter.controllers', [])
 
-.controller('ScheduleCtrl', function($rootScope,$scope,$http,Sessions) {
+.controller('ScheduleCtrl', function($rootScope,$scope,$http,Sessions,$ionicPopup) {
   $scope.sessions = [];
   $scope.speakers = [];
   $scope.sessionTracks = [];
   
+ $scope.bookmark = function(thisSessionID) {
+     $ionicPopup.alert({
+       title: 'This Functionality isn\'t ready',
+       template: 'You will be able to bookmark in the future'
+     });
+   };
+  
    Sessions.getSessions().success(function(data) {
       var sessionObj = [];
-      var SessionTracks = [];
+      var SessionTracks = [''];
       var Speakers = [];
          $(data).find("CCConsolidated").each(function () {
   
@@ -69,7 +76,6 @@ angular.module('starter.controllers', [])
             });
           }
           
-          
         sessionObj.push({
               SessionID:$SessionID,
               SessionStart:$SessionStart,
@@ -82,7 +88,8 @@ angular.module('starter.controllers', [])
               RoomName:$RoomName,
               RoomNumber:$RoomNumber,
               SessionTracks: $SessionTrack,
-              TimeSlotID: $TimeSlotID
+              TimeSlotID: $TimeSlotID,
+              TimeSlotText: TimeSlotsObj[TimeSlotsObj.map(function(e) { return e.TimeSlotID}).indexOf($TimeSlotID)].TimeShow
             });
            
             
@@ -90,17 +97,18 @@ angular.module('starter.controllers', [])
            SessionsObj = sessionObj;
            $scope.sessions = sessionObj;
            SpeakersObj = Speakers;
+           $scope.speakers = Speakers;
            $rootScope.speakers = Speakers;
            $scope.sessionTracks = SessionTracks;
-           //$scope.SessionTrackSelected = SessionTracks[0];
+           $scope.SessionTrackSelected = SessionTracks[0];
            $scope.TimeSlots = TimeSlotsObj;
            $scope.TimeSelected = TimeSlotsObj[0];
-          console.dir(sessionObj);
-          console.dir(TimeSlotsObj[0]);
+          //console.dir(sessionObj);
+          //console.dir(TimeSlotsObj[0]);
       });
 })
 
-.controller('SpeakersCtrl', function($rootScope,$scope, Speakers) {
+.controller('SpeakersCtrl', function($rootScope,$scope, Speakers,$ionicPopup) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -111,11 +119,22 @@ angular.module('starter.controllers', [])
 
   //$scope.speakers = Speakers.all();
  // $scope.speakers =$rootScope.speakers;
+  $scope.speakers = SpeakersObj;
+  
+   $scope.bookmark = function(thisSessionID) {
+     $ionicPopup.alert({
+       title: 'This Functionality isn\'t ready',
+       template: 'You will be able to bookmark in the future'
+     });
+   };
+   
 })
 
 .controller('SpeakersDetailCtrl', function($scope, $stateParams, Speakers) {
-  console.dir(SpeakersObj)
+  //console.dir(SpeakersObj);
+  //console.log($stateParams.speakerId);
   $scope.speaker = SpeakersObj[SpeakersObj.map(function(e) { return e.id}).indexOf($stateParams.speakerId)];
+  
 })
 
 .controller('ScheduleDetailCtrl', function($scope, $stateParams, Sessions) {
@@ -128,8 +147,8 @@ angular.module('starter.controllers', [])
  
  $scope.clickFloor = function(thisfloor) {
     $scope.floor=thisfloor;
-    console.log(thisfloor);
-    $("#floorsplanmap").attr('src',"maps/Floor" + thisfloor + ".png");
+    //console.log(thisfloor);
+    //$("#floorsplanmap").attr('src',"maps/Floor" + thisfloor + ".png");
  };
 
 })
