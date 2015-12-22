@@ -1,0 +1,43 @@
+<ion-view view-title="Code Camp Schedule">
+  <ion-content>
+   
+   <label class="item item-input item-select">
+     <div class="input-label">
+      Choose a Session Track
+    </div>
+     <select name="SessionTrackSelected" id="SessionTrackSelected"
+      ng-model="SessionTrackSelected" ng-options="o as o for o in sessionTracks">
+      </select>
+   </label>
+   
+   <label class="item item-input item-select">
+     <div class="input-label">
+      Time
+    </div>
+     <select name="TimeSelected1" id="TimeSelected1"
+      ng-model="TimeSelected" ng-options="o as o.TimeShow for o in TimeSlots track by o.TimeSlotID">
+      </select>
+   </label>
+   
+    <ion-list> 
+      <ion-item class="item-remove-animate item-avatar item-icon-right" 
+      ng-repeat="session in sessions | filter:{TimeSlotID:TimeSelected.TimeSlotID} | filter: {SessionTracks:SessionTrackSelected}" 
+      type="item-text-wrap" href="#/tab/session/{{session.SessionID}}">
+        <img ng-src="{{session.SpeakerImage}}" onerror="this.src='images/NoProfilePic.jpg';">
+        <h2>{{session.SessionName }}</h2>
+        <p>Track: {{session.SessionTracks}}</p>
+        <p>{{session.SessionDescription}}</p>
+        <p>Speaker: {{session.SpeakerName}}</p>
+        <p>Time: {{session.TimeSlotText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="bookmark(session.SessionID)">
+          Bookmark
+        </ion-option-button>
+        
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
+

@@ -1,0 +1,11 @@
+<ion-view view-title="{{session.SessionName}} - Room: {{session.RoomNumber}}">
+  <ion-content class="padding">
+	  {{session.SessionDescription}}
+    <p> 
+     Speaker: <a href="#/tab/speaker/{{session.SpeakerID}}"> {{session.SpeakerName}}</a>
+	  <img ng-src="{{session.SpeakerImage}}" style="width: 64px; height: 64px" align="right">
+	  {{session.SpeakerBio}}<BR>
+	  <div ng-show="session.SpeakerWebSite != ''">url:  {{session.SpeakerWebSite}}</div>
+    </p>
+  </ion-content>
+</ion-view>
