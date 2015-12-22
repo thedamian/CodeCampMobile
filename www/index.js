@@ -15,7 +15,9 @@ var pusher = new Pusher({
 });
 pusher.port = 443;
 
-var notificationHubService = azure.createNotificationHubService('hubname','connectionstring');
+var notificationHubService = azure.createNotificationHubService('CodeCampNotification','Endpoint=sb://codecampfl.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=N1jKdt95BAAnHTslUsaeAXyne9gtg4BMdh6gVzMK++8=');
+
+
 
 
 // Form posts
@@ -24,6 +26,19 @@ app.post("/www/api/PushTest",function(req,res) {
   "message": req.body.message,
   "title": req.body.title
   }); 
+    
+    var payload = {
+            data: {
+                msg: 'notification from the code camp. Your next is ready: ' + req.body.message
+            }
+        };
+    // Send Notification to android 
+    notificationHubService.gcm.send(null, payload, function(error){
+    if(!error){
+        //notification sent
+    }
+    });
+  
   res.send("Success. We sent everyone the notification.");
 });
 
