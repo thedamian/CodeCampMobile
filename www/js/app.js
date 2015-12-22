@@ -113,8 +113,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     });
     var channel = pusher.subscribe('test_channel');
     channel.bind('my_event', function(data) {
-         $ionicPopup.alert({
-            title: data.title,
-           template: data.message
-         });
+        alert(data.title + "\n" + data.message);
+        //  $ionicPopup.alert({
+        //     title: data.title,
+        //    template: data.message
+        //  });
     });
