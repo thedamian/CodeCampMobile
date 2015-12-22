@@ -28,7 +28,7 @@ pusher.port = 443;
 
 
 // Form posts
-app.post("/www/api/PushTest",function(req,res) {
+app.post("/api/PushTest",function(req,res) {
    pusher.trigger('test_channel', 'my_event', {
   "message": req.body.message,
   "title": req.body.title
