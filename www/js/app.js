@@ -101,15 +101,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 });
 
+    // Enable pusher logging - don't include this in production
+    Pusher.log = function(message) {
+      if (window.console && window.console.log) {
+        window.console.log(message);
+      }
+    };
 
-$( document ).ready(function() {
-  $("mapButton").on("click",function() {
-  FoorTOSelect($this.attr("id"));
-  });
-});
-
-function FoorTOSelect(floorVar) {
-  console.log(floorVar);
-    $("#floorsplanmap").attr('src',"maps/Floor" + floorVar + ".png");
-
-}
+    var pusher = new Pusher('559173cd02fac2d899db', {
+      encrypted: true
+    });
+    var channel = pusher.subscribe('test_channel');
+    channel.bind('my_event', function(data) {
+         $ionicPopup.alert({
+            title: data.title,
+           template: data.message
+         });
+    });
