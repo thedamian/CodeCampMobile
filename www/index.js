@@ -19,7 +19,7 @@ var pusher = new Pusher({
 });
 pusher.port = 443;
 
-app.post("api/PushTest",function(req,res) {
+app.post("/www/api/PushTest",function(req,res) {
   
    pusher.trigger('test_channel', 'my_event', {
   "message": req.body.message,
