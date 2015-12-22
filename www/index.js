@@ -25,8 +25,10 @@ app.post("/www/api/PushTest",function(req,res) {
   "message": req.body.message,
   "title": req.body.title
   }); 
+  
+  res.send("Success. We sent everyone the notification.");
     
-}
+});
 
 
 
