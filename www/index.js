@@ -1,14 +1,17 @@
 var http = require("http")
 var Pusher = require('pusher');
-var azure = require('azure');
+var bodyParser = require('body-parser');
+//var azure = require('azure');
+var gcm = require('android-gcm');
 var express = require("express")
 var app = express()
 var port = process.env.PORT || 5000
 
-app.use(express.bodyParser());
-app.configure(function () {
-  app.use(allowCrossDomain);
-});
+var gcmObject = new gcm.AndroidGcm('AIzaSyAmD7bA9DzzNlwqEiFCFxlrC5vtB4yuz3k');
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
 
 // Notification setups
 var pusher = new Pusher({
@@ -19,7 +22,7 @@ var pusher = new Pusher({
 });
 pusher.port = 443;
 
-var notificationHubService = azure.createNotificationHubService('CodeCampNotification','Endpoint=sb://codecampfl.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=N1jKdt95BAAnHTslUsaeAXyne9gtg4BMdh6gVzMK++8=');
+// var notificationHubService = azure.createNotificationHubService('CodeCampNotification','Endpoint=sb://codecampfl.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=N1jKdt95BAAnHTslUsaeAXyne9gtg4BMdh6gVzMK++8=');
 
 
 
@@ -30,23 +33,25 @@ app.post("/www/api/PushTest",function(req,res) {
   "message": req.body.message,
   "title": req.body.title
   }); 
-    
-    var payload = {
-            data: {
-                msg: 'notification from the code camp. Your next is ready: ' + req.body.message
-            }
-        };
-    // Send Notification to android 
-    notificationHubService.gcm.send(null, payload, function(error){
-    if(!error){
-        //notification sent
+   
+   var message = new gcm.Message({
+    data: {
+        message: req.body.message,
+        title: req.body.title
     }
-    });
+    }); 
+gcmObject.send(message, function(GcmError, GcmResponse) {});
   
   res.send("Success. We sent everyone the notification.");
   res.end(); // end the response
 });
 
+function GcmError() {
+    console.log("error");
+}
+function GcmResponse(res) {
+    console.log("good gcm");
+}
 
 
 
