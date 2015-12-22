@@ -25,7 +25,9 @@ pusher.port = 443;
 // var notificationHubService = azure.createNotificationHubService('CodeCampNotification','Endpoint=sb://codecampfl.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=N1jKdt95BAAnHTslUsaeAXyne9gtg4BMdh6gVzMK++8=');
 
 
-
+app.get('/www', function(req, res) {
+  res.redirect('/');
+});
 
 // Form posts
 app.post("/api/PushTest",function(req,res) {
