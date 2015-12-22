@@ -1,10 +1,14 @@
 var http = require("http")
 var Pusher = require('pusher');
 var azure = require('azure');
-var azure = require('azure');
 var express = require("express")
 var app = express()
 var port = process.env.PORT || 5000
+
+app.use(express.bodyParser());
+app.configure(function () {
+  app.use(allowCrossDomain);
+});
 
 // Notification setups
 var pusher = new Pusher({
@@ -40,6 +44,7 @@ app.post("/www/api/PushTest",function(req,res) {
     });
   
   res.send("Success. We sent everyone the notification.");
+  res.end(); // end the response
 });
 
 
