@@ -21,10 +21,7 @@ angular.module('starter.controllers', [])
   $scope.sessions = [];
   $scope.speakers = [];
   $scope.sessionTracks = [];
-  
-  $scope.Modal(TextToShow) {
-      
-  }
+
   
  $scope.bookmark = function(thisSessionID) {
      $ionicPopup.alert({
