@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        version="2.0"
+        rim:header="RIM-Widget: rim/widget">
+ 
+  <author href="http://www.example.com/"
+          rim:copyright="Copyright 2015-1026 3 Guys 1 phone">3 Guys 1 Phone</author>
+ 
+  <rim:navigation mode="focus" />
+ 
+  <name>Code Camp</name>
+ 
+  <description>
+    Schedule of the South Florida Code Camp
+  </description>
+ 
+  <rim:orientation mode="auto"/>
+ 
+  <rim:loadingScreen backgroundImage="splash.png"
+                     foregroundImage="splash.png"
+                     onLocalPageLoad="true">
+    <rim:transitionEffect type="zoomIn" />
+  </rim:loadingScreen>
+ 
+  <icon src="icon.png"/>
+ 
+  <rim:cache maxCacheSizeTotal="2048" maxCacheSizeItem ="256" />
+ 
+  <content src="index.html" >
+  </content>
+ 
+  <feature id="blackberry.ui.dialog"/>
+ 
+  <access uri="https://crossorigin.me" subdomains="true" />
+  <access uri="http://jsdelivr.net" subdomains="true" />
+  <access uri="http://fladotnet.com" subdomains="true" />
+  
+ 
+  <rim:connection timeout="25000">
+    <id>TCP_WIFI</id>
+    <id>MDS</id>
+    <id>BIS-B</id>
+    <id>TCP_CELLULAR</id>
+    <id>WAP2</id>
+    <id>WAP</id>
+  </rim:connection>
+ 
+  <license>
+   Open Source
+  </license>
+ 
+</widget>
