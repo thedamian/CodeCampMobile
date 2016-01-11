@@ -99,7 +99,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/schedule');
 
-});
+})
+.config(['$ionicConfigProvider', function($ionicConfigProvider) {
+
+    $ionicConfigProvider.tabs.position('top'); // Windows phone and Blackberry have trouble with it at the bottom
+
+}]);
 
     /*
     // Enable pusher logging - don't include this in production
