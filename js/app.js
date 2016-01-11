@@ -102,7 +102,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 })
 .config(['$ionicConfigProvider', function($ionicConfigProvider) {
 
-    $ionicConfigProvider.tabs.position('top'); // Windows phone and Blackberry have trouble with it at the bottom
+    $ionicConfigProvider.tabs.position('bottom'); // Windows phone and Blackberry have trouble with it at the bottom
 
 }]);
 
