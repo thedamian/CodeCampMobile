@@ -9,5 +9,9 @@
   .tab-nav {
     top:0;
   }
+.has-tabs,
+.bar-footer.has-tabs {
+    bottom:0;
+  }
 
 }
