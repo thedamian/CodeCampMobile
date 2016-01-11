@@ -14,7 +14,7 @@ angular.module('starter.services', [])
 return {
   getSessions : function() {
     return $http({
-      url: "https://crossorigin.me/http://www.fladotnet.com/flanetdata/api/ccconsolidated",
+      url: "http://crossorigin.me/http://www.fladotnet.com/flanetdata/api/ccconsolidated",
       dataType: "xml",
       method: 'GET'
     }) // return $http
