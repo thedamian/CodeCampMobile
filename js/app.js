@@ -101,6 +101,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 });
 
+    /*
     // Enable pusher logging - don't include this in production
     Pusher.log = function(message) {
       if (window.console && window.console.log) {
@@ -111,6 +112,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     var pusher = new Pusher('559173cd02fac2d899db', {
       encrypted: true
     });
+    */
+    
     var channel = pusher.subscribe('test_channel');
     channel.bind('my_event', function(data) {
         alert(data.title + "\n" + data.message);
