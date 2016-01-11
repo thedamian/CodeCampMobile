@@ -112,7 +112,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     var pusher = new Pusher('559173cd02fac2d899db', {
       encrypted: true
     });
-    */
+    
     
     var channel = pusher.subscribe('test_channel');
     channel.bind('my_event', function(data) {
@@ -122,3 +122,4 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         //    template: data.message
         //  });
     });
+    */
