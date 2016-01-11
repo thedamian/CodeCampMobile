@@ -1,1 +1,10 @@
 /* Empty. Add your own CSS if you like */
+@media screen and (max-width: 640px)
+{
+
+.bar-stable 
+{
+  display: none;
+}
+
+}
