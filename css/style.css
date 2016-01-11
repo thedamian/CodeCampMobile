@@ -1,10 +1,13 @@
 /* Empty. Add your own CSS if you like */
-@media screen and (max-width: 640px)
+@media screen and (max-height: 480px)
 {
 
-.bar-stable 
-{
-  display: none;
-}
+  .bar-stable 
+  {
+    display: none;
+  }
+  .tab-nav {
+    top:0;
+  }
 
 }
