@@ -19,10 +19,11 @@
     </head>
   <body>
 
-<div data-role="page" data-theme="b" id="CodeCampPage" class="my-page" data-url="code-camp">
+<div data-role="page" data-theme="b" id="schedule" class="my-page" data-url="code-camp">
     <div data-role="header">
-        <h1>Code Camp Schedule</h1>
-        <!--<a href="grid-listview.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a>-->
+        <h1>Schedule</h1>
+<a href="#map" data-shadow="false" data-iconshadow="false" data-icon="arrow-r" data-iconpos="next" data-rel="next" data-ajax="false">Map</a>
+
     </div><!-- /header -->
     <div data-role="content">
         <ul data-role="listview" id="SessionsDiv" data-inset="true">
@@ -36,6 +37,36 @@
 </div>
 
 
+<div data-role="page" data-theme="b" id="map" class="my-page" data-url="code-camp">
+    <div data-role="header">
+        <h1>Map of Building</h1>
+<a href="#schedule" data-shadow="false" data-iconshadow="false" data-icon="arrow-r" data-iconpos="next" data-rel="next" data-ajax="false">Schedule</a>
 
+    </div><!-- /header -->
+       <div data-role="content"> 
+    <center>
+    <button class="button button-dark mapButton" id="1" onclick="clickFloor(1)">
+      Floor 1
+    </button>
+    <button class="button button-dark mapButton" id="2" onclick="clickFloor(2)"> 
+      Floor 2
+    </button>
+    <button class="button button-dark mapButton" id="3" onclick="clickFloor(3)">
+      Floor 3
+    </button>
+    <button  class="button button-dark mapButton" id="4" onclick="clickFloor(4)">
+    Floor 4
+    </button>
+    </center>
+
+    <div id="floorsplan">
+      <img id="floorsplanmap"  src="maps\Floor1.png">
+    </div>
+
+</div> <!-- content -->
+</div>
+<style>
+  .mapButton {width:100px;}
+</style>
   </body>
 </html>

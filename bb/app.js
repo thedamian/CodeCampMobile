@@ -99,12 +99,16 @@ var TimeSlotsObj = [
             
         }); // end ajax
   
-  
+
   
     }); // end document Ready
 
 
-
+function clickFloor(floor)
+    {
+     // console.log("floor"+floor);
+    $("#floorsplanmap").attr('src',"maps\\Floor"+floor+".png");
+    }
   
          
 
