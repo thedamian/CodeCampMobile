@@ -88,7 +88,7 @@ var TimeSlotsObj = [
             });
                 
                 // insert into list of schedules
-                $("#SessionsDiv").append('<li><a href="#"><img width="50" align=left src="'+$SpeakerImage+'"></a><h2>'+$SessionName+'</h2><p>Time: '+$SessionStart+'<BR>Room: '+$RoomNumber+'</p><p>'+$SessionDescription+'</p><p class="ui-li-aside">'+$SessionTrack+'</p></a></li>');
+                $("#SessionsDiv").append('<li><img width="50" align=left src="'+$SpeakerImage+'"><h2>'+$SessionName+'</h2><p>By: '+$SpeakerName+'</p><p>Time: '+$SessionStart+'<BR>Room: '+$RoomNumber+'</p><p>'+$SessionDescription+'</p><p class="ui-li-aside">'+$SessionTrack+'</p></a><hr /></li>');
                 
                 
                 }); // end of each
