@@ -2,6 +2,8 @@
 // Initiate some variables
 var SessionsObj = [];
 var SpeakersObj = [];
+      var SessionTracks = [''];
+      var Speakers = [];
 var TimeSlotsObj = [
                     {TimeSlotID:'',TimeShow:"Any Time"},
                     {TimeSlotID:'1',TimeShow:"7:30 - Registration"},
