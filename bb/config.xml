@@ -31,7 +31,7 @@
   <feature id="blackberry.invoke.BrowserArguments" required="true" version="1.0.0.0"/>
   <access subdomains="true" uri="*"/>
   <access subdomains="true" uri="http://googleapis.com"/>
-  <icon rim:hover="false" src="images/icon-114x114.png"/>
+  <icon rim:hover="false" src="images/LBAI53_Sunny.png"/>
   <content src="index.html"/>
   <rim:loadingScreen backgroundColor="#808080" backgroundImage="images/WW_Interface_DarkGradient.png" 
 foregroundImage="images/Loading.gif" onFirstLaunch="true"/>
