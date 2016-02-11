@@ -11,6 +11,8 @@ var gcmObject = new gcm.AndroidGcm('AIzaSyAmD7bA9DzzNlwqEiFCFxlrC5vtB4yuz3k');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+//app.use(express.urlencoded());
+
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
