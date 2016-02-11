@@ -61,8 +61,7 @@ app.get('/app',function(req,res) {
         res.redirect('https://www.microsoft.com/en-us/store/apps/south-florida-code-camp/9nblggh5f7c5');
 
     // BLackberry
-    if ( (/BlackBerry/.test(ua)) || (/SymbOS/.test(ua)) || (/SymbianOS/.test(ua)) || (/Nokia/.test(ua)) ||(/webOSy
-    /.test(ua)) )
+    if ( (/BlackBerry/.test(ua)) || (/SymbOS/.test(ua)) || (/SymbianOS/.test(ua)) || (/Nokia/.test(ua)) ||(/webOS/.test(ua)) )
     {
        if (!(/BB10/.test(ua)))
         res.redirect('/bb');          
