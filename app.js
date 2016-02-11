@@ -37,6 +37,40 @@ app.get('/www', function(req, res) {
   res.redirect('/');
 });
 
+app.get('/app',function(req,res) {
+  var ua = req.headers['user-agent'];
+
+    //Android
+    if (/Android/.test(ua))
+        res.redirect('https://play.google.com/store/apps/details?id=com.threeguys1phone.codecampfl');
+
+
+    // iOS
+    if (/iPhone/.test(ua))
+        res.redirect('https://itunes.apple.com/us/app/south-florida-code-camp/id1070282332?ls=1&mt=8');
+    
+    if (/iPad/.test(ua))
+        res.redirect('https://itunes.apple.com/us/app/south-florida-code-camp/id1070282332?ls=1&mt=8');    
+    
+    
+    //Windows PHone
+    if (/Windows Phone/.test(ua))
+        res.redirect('https://www.microsoft.com/en-us/store/apps/south-florida-code-camp/9nblggh5f7c5');
+
+    if (/IEMobile/.test(ua))
+        res.redirect('https://www.microsoft.com/en-us/store/apps/south-florida-code-camp/9nblggh5f7c5');
+
+    // BLackberry
+    if (/BlackBerry/.test(ua))
+    {
+       if (!(/BB10/.test(ua)))
+        res.redirect('/bb');          
+    }   
+    
+    res.redirect('/');
+        
+});
+
 // Form posts
 app.post("/api/PushTest",function(req,res) {
    pusher.trigger('test_channel', 'my_event', {
@@ -68,13 +102,7 @@ function GcmResponse(res) {
 // -- Regular web server stuff
 app.use(express.static(__dirname + "/"))
 
-var server = http.createServer(app)
-server.listen(port)
+var server = http.createServer(app);
+server.listen(port);
 
-console.log("http server listening on %d", port)
-
-
-
-
-
-
+console.log("http server listening on %d", port);
