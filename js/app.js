@@ -94,6 +94,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'socialCtrl'
       }
     }
+  }).state('tab.sponsors', {
+    url: '/sponsors',
+    views: {
+      'tab-sponsors': {
+        templateUrl: 'templates/tab-sponsors.html',
+        controller: 'sponsorsCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback

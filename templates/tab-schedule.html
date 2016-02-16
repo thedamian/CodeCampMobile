@@ -3,7 +3,7 @@
    
    <label class="item item-input item-select">
      <div class="input-label">
-      Choose a Session Track
+      Choose a Track
     </div>
      <select name="SessionTrackSelected" id="SessionTrackSelected"
       ng-model="SessionTrackSelected" ng-options="o as o for o in sessionTracks">
@@ -18,7 +18,11 @@
       ng-model="TimeSelected" ng-options="o as o.TimeShow for o in TimeSlots track by o.TimeSlotID">
       </select>
    </label>
-   
+  
+  <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="parseDate()">
+  </ion-refresher>
     <ion-list> 
       <ion-item class="item-remove-animate item-avatar item-icon-right" 
       ng-repeat="session in sessions | filter:{TimeSlotID:TimeSelected.TimeSlotID} | filter: {SessionTracks:SessionTrackSelected}" 
@@ -37,7 +41,9 @@
         
       </ion-item>
     </ion-list>
-
+  <div id="loading">
+    <BR><BR><BR>Loading...
+  </div>
   </ion-content>
 </ion-view>
 

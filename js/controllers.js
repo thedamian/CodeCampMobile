@@ -29,8 +29,11 @@ angular.module('starter.controllers', [])
        template: 'You will be able to bookmark in the future'
      });
    };
+   
   
-   Sessions.getSessions().success(function(data) {
+  $scope.parseDate = function() {
+    $("#loading").show();
+    Sessions.getSessions().success( function(data) {
       var sessionObj = [];
       var SessionTracks = [''];
       var Speakers = [];
@@ -106,7 +109,17 @@ angular.module('starter.controllers', [])
            $scope.TimeSelected = TimeSlotsObj[0];
           //console.dir(sessionObj);
           //console.dir(TimeSlotsObj[0]);
-      });
+      }).finally(function() {
+       // Stop the ion-refresher from spinning
+       $scope.$broadcast('scroll.refreshComplete');
+       $("#loading").hide();
+     });
+  }
+  
+  $scope.parseDate();
+  
+  
+   
 })
 
 .controller('SpeakersCtrl', function($rootScope,$scope, Speakers,$ionicPopup) {
@@ -155,5 +168,9 @@ angular.module('starter.controllers', [])
 })
 .controller('socialCtrl', function($scope) {
 
+})
+.controller('sponsorsCtrl',function($scope) {
+  
 });
+
 
