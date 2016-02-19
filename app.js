@@ -38,6 +38,15 @@ app.get('/www', function(req, res) {
 });
 
 app.get('/app',function(req,res) {
+  checkForMobilePlatform(req,res);
+  res.redirect('/');
+});
+
+app.get('/',function(req,res) {
+  checkForMobilePlatform(req,res);
+});
+
+function checkForMobilePlatform(req,res) {
   var ua = req.headers['user-agent'];
 
 
@@ -58,8 +67,8 @@ app.get('/app',function(req,res) {
 
     //Android
     if (/Android/.test(ua))
-        res.redirect('https://play.google.com/store/apps/details?id=com.threeguys1phone.codecampfl');
-
+        //res.redirect('https://play.google.com/store/apps/details?id=com.threeguys1phone.codecampfl');
+        res.redirect('market://details?id=com.threeguys1phone.codecampfl');
 
     // iOS
     if (/iPhone/.test(ua))
@@ -69,9 +78,7 @@ app.get('/app',function(req,res) {
         res.redirect('https://itunes.apple.com/us/app/south-florida-code-camp/id1070282332?ls=1&mt=8');    
     
 
-    res.redirect('/');
-        
-});
+}
 
 // Form posts
 app.post("/api/PushTest",function(req,res) {
