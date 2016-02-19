@@ -1,0 +1,32 @@
+2016-02-12T04:14:46.0799126Z,Updating branch 'master'.,8c96639d-0fea-46e5-96a2-79227e8df471,0
+2016-02-12T04:14:49.3197581Z,Updating submodules.,8b7ae42e-0b05-4ae8-82dd-ec81a17eb00a,0
+2016-02-12T04:14:49.3896620Z,Preparing deployment for commit id 'aabd73b0de'.,c3ac6aea-b52f-4207-8f43-25f9ad3cf043,0
+2016-02-12T04:14:54.0706554Z,Generating deployment script.,84125a51-4fce-4f4e-976f-c807ce4b2c60,0
+	2016-02-12T04:14:54.1496680Z,Using the following command to generate deployment script: 'azure site deploymentscript -y --no-dot-deployment -r "D:\home\site\repository" -o "D:\home\site\deployments\tools" --node --sitePath "D:\home\site\repository"'.,,0
+	2016-02-12T04:14:55.0863104Z,Generating deployment script for node.js Web Site,,0
+	2016-02-12T04:14:55.1019369Z,Generated deployment script files,,0
+2016-02-12T04:14:55.2113487Z,Running deployment command...,3a414411-4c31-4bcd-b449-472f91f6814e,0
+	2016-02-12T04:14:55.2269603Z,Command: "D:\home\site\deployments\tools\deploy.cmd",,0
+	2016-02-12T04:14:56.8207426Z,Handling node.js deployment.,,0
+	2016-02-12T04:15:04.2090255Z,KuduSync.NET from: 'D:\home\site\repository' to: 'D:\home\site\wwwroot',,0
+	2016-02-12T04:15:04.2276952Z,Copying file: 'app.js',,0
+	2016-02-12T04:15:04.2426491Z,Copying file: 'node_modules\.bin\errno',,0
+	2016-02-12T04:15:04.2583401Z,Copying file: 'node_modules\.bin\esparse',,0
+	2016-02-12T04:15:04.2740368Z,Copying file: 'node_modules\.bin\esvalidate',,0
+	2016-02-12T04:15:04.2896910Z,Copying file: 'node_modules\.bin\json5',,0
+	2016-02-12T04:15:04.3248070Z,Copying file: 'node_modules\.bin\mkdirp',,0
+	2016-02-12T04:15:04.3555775Z,Copying file: 'node_modules\.bin\sha.js',,0
+	2016-02-12T04:15:04.3855219Z,Copying file: 'node_modules\.bin\uglifyjs',,0
+	2016-02-12T04:15:04.4153431Z,Copying file: 'node_modules\.bin\uuid',,0
+	2016-02-12T04:15:04.4638535Z,Copying file: 'node_modules\.bin\webpack',,0
+	2016-02-12T04:15:04.4927985Z,Copying file: 'node_modules\serve-static\node_modules\.bin\mime',,0
+	2016-02-12T04:15:04.7616733Z,Looking for app.js/server.js under site root.,,0
+	2016-02-12T04:15:04.7740589Z,Using start-up script app.js,,0
+	2016-02-12T04:15:04.7937514Z,Generated web.config.,,0
+	2016-02-12T04:15:04.8209584Z,The package.json file does not specify node.js engine version constraints.,,0
+	2016-02-12T04:15:04.8533515Z,The node.js application will run with the default node.js version 4.1.2.,,0
+	2016-02-12T04:15:04.8678385Z,Selected npm version 3.3.6,,0
+	2016-02-12T04:15:15.9467950Z,npm WARN install Couldn't install optional dependency: Unsupported,,1
+	2016-02-12T04:15:26.1165885Z,Finished successfully.,,0
+2016-02-12T04:15:26.2110401Z,Running post deployment command(s)...,00e13f27-9b76-4314-860b-a71e1e47dc88,0
+2016-02-12T04:15:26.3209381Z,Deployment successful.,15baa993-26a8-4a8f-a462-d007bb8948a9,0

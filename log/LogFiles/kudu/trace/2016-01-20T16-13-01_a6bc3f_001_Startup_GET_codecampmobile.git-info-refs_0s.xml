@@ -1,0 +1,3 @@
+<step title="Startup Request" date="2016-01-20T16:13:01.877" instance="a6bc3f" url="/codecampmobile.git/info/refs?service=git-receive-pack" method="GET" type="request" pid="5212,2,6" ScmType="LocalGit" >
+  <step title="Cleanup Xml Logs" date="2016-01-20T16:13:01.895" /><!-- duration: 13ms -->
+</step><!-- duration: 32ms -->

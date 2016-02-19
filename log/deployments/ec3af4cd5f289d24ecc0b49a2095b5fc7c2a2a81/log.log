@@ -1,0 +1,30 @@
+2016-02-19T05:27:28.8191974Z,Updating branch 'master'.,429692ff-65b3-41e2-b684-154acd6907d9,0
+2016-02-19T05:27:44.2582385Z,Updating submodules.,57711669-63be-4a9d-b1c3-d07a9a245369,0
+2016-02-19T05:27:44.3575639Z,Preparing deployment for commit id 'ec3af4cd5f'.,330c1359-cff1-4da5-8de8-e6e87d4437d8,0
+2016-02-19T05:27:48.4542924Z,Generating deployment script.,3ea53d16-88fd-4df6-bdd8-dbbe36fe155a,0
+	2016-02-19T05:27:48.5444242Z,Using cached version of deployment script (command: 'azure -y --no-dot-deployment -r "D:\home\site\repository" -o "D:\home\site\deployments\tools" --node --sitePath "D:\home\site\repository"').,,0
+2016-02-19T05:27:48.6266872Z,Running deployment command...,e24243ce-bb5d-4f48-acaa-a1d973fc21f3,0
+	2016-02-19T05:27:48.6266872Z,Command: "D:\home\site\deployments\tools\deploy.cmd",,0
+	2016-02-19T05:27:49.4235515Z,Handling node.js deployment.,,0
+	2016-02-19T05:28:05.8527042Z,KuduSync.NET from: 'D:\home\site\repository' to: 'D:\home\site\wwwroot',,0
+	2016-02-19T05:28:05.8885689Z,Copying file: 'app.js',,0
+	2016-02-19T05:28:05.8996747Z,Copying file: 'node_modules\.bin\errno',,0
+	2016-02-19T05:28:05.9152008Z,Copying file: 'node_modules\.bin\esparse',,0
+	2016-02-19T05:28:05.9479239Z,Copying file: 'node_modules\.bin\esvalidate',,0
+	2016-02-19T05:28:05.9777020Z,Copying file: 'node_modules\.bin\json5',,0
+	2016-02-19T05:28:06.0096738Z,Copying file: 'node_modules\.bin\mkdirp',,0
+	2016-02-19T05:28:06.0558273Z,Copying file: 'node_modules\.bin\sha.js',,0
+	2016-02-19T05:28:06.0714857Z,Copying file: 'node_modules\.bin\uglifyjs',,0
+	2016-02-19T05:28:06.1027028Z,Copying file: 'node_modules\.bin\uuid',,0
+	2016-02-19T05:28:06.1237560Z,Copying file: 'node_modules\.bin\webpack',,0
+	2016-02-19T05:28:06.1495784Z,Copying file: 'node_modules\serve-static\node_modules\.bin\mime',,0
+	2016-02-19T05:28:06.6834894Z,Looking for app.js/server.js under site root.,,0
+	2016-02-19T05:28:06.6964602Z,Using start-up script app.js,,0
+	2016-02-19T05:28:06.7277107Z,Generated web.config.,,0
+	2016-02-19T05:28:06.7589930Z,The package.json file does not specify node.js engine version constraints.,,0
+	2016-02-19T05:28:06.7913816Z,The node.js application will run with the default node.js version 4.1.2.,,0
+	2016-02-19T05:28:06.8063795Z,Selected npm version 3.3.6,,0
+	2016-02-19T05:28:24.7324768Z,npm WARN install Couldn't install optional dependency: Unsupported,,1
+	2016-02-19T05:28:36.1114312Z,Finished successfully.,,0
+2016-02-19T05:28:36.1940840Z,Running post deployment command(s)...,6e42473c-9852-4917-a4dd-3c1a6960f7b7,0
+2016-02-19T05:28:36.2693974Z,Deployment successful.,6532ff8e-a986-42cd-9414-00541f123b30,0

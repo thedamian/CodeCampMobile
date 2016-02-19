@@ -1,0 +1,3 @@
+<step title="Incoming Request" date="2016-02-19T16:08:33.486" instance="964627" url="/dump" method="GET" type="request" pid="9760,2,27" Connection="Keep-Alive" Content-Length="0" Accept-Charset="UTF-8" Host="codecampmobile.scm.azurewebsites.net" User-Agent="WindowsAzureXplatCLI/0.9.14" X-SITE-DEPLOYMENT-ID="codeCampMobile" >
+  <step title="Cleanup Xml Logs" date="2016-02-19T16:08:33.486" /><!-- duration: 19ms -->
+  <step title="ZipStreamContent.OnZip" date="2016-02-19T16:08:35.231" 

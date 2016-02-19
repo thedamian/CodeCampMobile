@@ -1,0 +1,4 @@
+<step title="Incoming Request" date="2016-01-20T16:16:42.439" instance="a6bc3f" url="/command" method="POST" type="request" pid="5212,2,14" Connection="Keep-Alive" Content-Length="88" Content-Type="application/json" Expect="100-continue" Host="codecampmobile.scm.azurewebsites.net" X-SITE-DEPLOYMENT-ID="codeCampMobile" >
+  <step title="Executing npm install express &amp; echo. &amp; cd" date="2016-01-20T16:16:42.471" CWD="D:\home\site\wwwroot" /><!-- duration: 11836ms -->
+  <step title="Outgoing response" date="2016-01-20T16:16:54.307" type="response" statusCode="200" statusText="OK" Server="Microsoft-IIS/8.0" x-ms-request-id="ca5b0235-e832-4243-8cfe-31d364faf8c6" Cache-Control="private" X-AspNet-Version="4.0.30319" Content-Type="application/json; charset=utf-8" /><!-- duration: 20ms -->
+</step><!-- duration: 11887ms -->

@@ -1,0 +1,4 @@
+<step title="Incoming Request" date="2016-01-20T04:00:17.449" instance="a6bc3f" url="/command" method="POST" type="request" pid="4340,2,20" Connection="Keep-Alive" Content-Length="38" Content-Type="application/json" Expect="100-continue" Host="codecampmobile.scm.azurewebsites.net" X-SITE-DEPLOYMENT-ID="codeCampMobile" >
+  <step title="Executing cd" date="2016-01-20T04:00:17.480" CWD="site\wwwroot" /><!-- duration: 47ms -->
+  <step title="Outgoing response" date="2016-01-20T04:00:17.546" type="response" statusCode="200" statusText="OK" Server="Microsoft-IIS/8.0" x-ms-request-id="028d0f97-e55f-4098-ac89-cf81fe394615" Cache-Control="private" X-AspNet-Version="4.0.30319" Content-Type="application/json; charset=utf-8" /><!-- duration: 0ms -->
+</step><!-- duration: 98ms -->

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<deployment>
+  <id>838379d93f89f2ba24c75972a6acc618f2426765</id>
+  <author>Damian Montero</author>
+  <deployer>websocketdemo</deployer>
+  <authorEmail>photoca@hotmail.com</authorEmail>
+  <message>adding nokia to bb site
+</message>
+  <progress></progress>
+  <status>Success</status>
+  <statusText></statusText>
+  <lastSuccessEndTime>2016-02-11T18:50:49.0498448Z</lastSuccessEndTime>
+  <receivedTime>2016-02-11T18:50:09.3632193Z</receivedTime>
+  <startTime>2016-02-11T18:50:13.6009812Z</startTime>
+  <endTime>2016-02-11T18:50:49.0498448Z</endTime>
+  <complete>True</complete>
+  <is_temp>False</is_temp>
+  <is_readonly>False</is_readonly>
+</deployment>

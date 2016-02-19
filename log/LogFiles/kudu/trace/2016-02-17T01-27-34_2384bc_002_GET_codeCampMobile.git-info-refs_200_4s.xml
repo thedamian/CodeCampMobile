@@ -1,0 +1,15 @@
+<step title="Incoming Request" date="2016-02-17T01:27:34.147" instance="2384bc" url="/codeCampMobile.git/info/refs?service=git-upload-pack" method="GET" type="request" pid="2784,2,6" Connection="Keep-Alive" Pragma="no-cache" Accept="*/*" Accept-Encoding="gzip" Host="codecampmobile.scm.azurewebsites.net" User-Agent="git/2.5.4 (Apple Git-61)" X-SITE-DEPLOYMENT-ID="codeCampMobile" >
+  <step title="InfoRefsService.Execute" date="2016-02-17T01:27:36.080" >
+    <step title="Assuming git repository at D:\home\site\repository" date="2016-02-17T01:27:36.158" /><!-- duration: 16ms -->
+    <step title="InfoRefsService.SmartInfoRefs" date="2016-02-17T01:27:36.174" >
+      <step title="Assuming git repository at D:\home\site\repository" date="2016-02-17T01:27:36.460" /><!-- duration: 0ms -->
+      <step title="Assuming git repository at D:\home\site\repository" date="2016-02-17T01:27:37.472" /><!-- duration: 16ms -->
+      <step title="Assuming git repository at D:\home\site\repository" date="2016-02-17T01:27:37.519" /><!-- duration: 0ms -->
+      <step title="GitExeServer.AdvertiseUploadPack" date="2016-02-17T01:27:37.534" >
+        <step title="Executing external process" date="2016-02-17T01:27:37.703" type="process" path="git.exe" arguments="upload-pack --stateless-rpc --advertise-refs &quot;D:\home\site\repository&quot;" /><!-- duration: 583ms -->
+      </step><!-- duration: 752ms -->
+      <step title="Writing 290 bytes" date="2016-02-17T01:27:38.287" /><!-- duration: 11ms -->
+    </step><!-- duration: 2124ms -->
+  </step><!-- duration: 2234ms -->
+  <step title="Outgoing response" date="2016-02-17T01:27:38.413" type="response" statusCode="200" statusText="OK" Server="Microsoft-IIS/8.0" x-ms-request-id="f551d14d-d388-4977-b89d-888a729189ea" Pragma="no-cache" Cache-Control="must-revalidate, no-cache, max-age=0" Expires="Tue, 01 Jan 1980 00:00:00 GMT" Content-Length="290" X-AspNet-Version="4.0.30319" Content-Type="application/x-git-upload-pack-advertisement" /><!-- duration: 0ms -->
+</step><!-- duration: 4278ms -->

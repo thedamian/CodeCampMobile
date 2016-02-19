@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<deployment>
+  <id>162053a91234796c595fc521fca9fbb905753ba8</id>
+  <author>Damian Montero</author>
+  <deployer>websocketdemo</deployer>
+  <authorEmail>photoca@hotmail.com</authorEmail>
+  <message>kindle
+</message>
+  <progress></progress>
+  <status>Success</status>
+  <statusText></statusText>
+  <lastSuccessEndTime>2016-02-11T03:34:43.8899689Z</lastSuccessEndTime>
+  <receivedTime>2016-02-11T03:34:08.8311939Z</receivedTime>
+  <startTime>2016-02-11T03:34:12.7978847Z</startTime>
+  <endTime>2016-02-11T03:34:43.8899689Z</endTime>
+  <complete>True</complete>
+  <is_temp>False</is_temp>
+  <is_readonly>False</is_readonly>
+</deployment>

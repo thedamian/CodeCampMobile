@@ -1,0 +1,16 @@
+<step title="Incoming Request" date="2016-02-11T02:55:24.240" instance="2384bc" url="/codecampmobile.git/info/refs?service=git-upload-pack" method="GET" type="request" pid="7056,2,7" Connection="Keep-Alive" Pragma="no-cache" Accept="*/*" Accept-Encoding="gzip" Host="codecampmobile.scm.azurewebsites.net" User-Agent="git/2.7.0" X-SITE-DEPLOYMENT-ID="codeCampMobile" >
+  <step title="Cleanup Xml Logs" date="2016-02-11T02:55:24.240" /><!-- duration: 31ms -->
+  <step title="InfoRefsService.Execute" date="2016-02-11T02:55:24.271" >
+    <step title="Assuming git repository at D:\home\site\repository" date="2016-02-11T02:55:24.303" /><!-- duration: 0ms -->
+    <step title="InfoRefsService.SmartInfoRefs" date="2016-02-11T02:55:24.303" >
+      <step title="Assuming git repository at D:\home\site\repository" date="2016-02-11T02:55:24.371" /><!-- duration: 0ms -->
+      <step title="Assuming git repository at D:\home\site\repository" date="2016-02-11T02:55:32.910" /><!-- duration: 0ms -->
+      <step title="Assuming git repository at D:\home\site\repository" date="2016-02-11T02:55:32.941" /><!-- duration: 16ms -->
+      <step title="GitExeServer.AdvertiseUploadPack" date="2016-02-11T02:55:32.957" >
+        <step title="Executing external process" date="2016-02-11T02:55:32.972" type="process" path="git.exe" arguments="upload-pack --stateless-rpc --advertise-refs &quot;D:\home\site\repository&quot;" /><!-- duration: 422ms -->
+      </step><!-- duration: 453ms -->
+      <step title="Writing 290 bytes" date="2016-02-11T02:55:33.410" /><!-- duration: 16ms -->
+    </step><!-- duration: 9123ms -->
+  </step><!-- duration: 9154ms -->
+  <step title="Outgoing response" date="2016-02-11T02:55:33.441" type="response" statusCode="200" statusText="OK" Server="Microsoft-IIS/8.0" x-ms-request-id="ddeb240f-a78c-4720-a5d7-f5547d32c10f" Pragma="no-cache" Cache-Control="must-revalidate, no-cache, max-age=0" Expires="Tue, 01 Jan 1980 00:00:00 GMT" Content-Length="290" X-AspNet-Version="4.0.30319" Content-Type="application/x-git-upload-pack-advertisement" /><!-- duration: 3ms -->
+</step><!-- duration: 9204ms -->

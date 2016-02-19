@@ -1,0 +1,11 @@
+<step title="Incoming Request" date="2016-02-11T02:56:39.920" instance="2384bc" url="/codecampmobile.git/git-receive-pack" method="POST" type="request" pid="7056,2,14" Connection="Keep-Alive" Content-Length="1168" Content-Type="application/x-git-receive-pack-request" Accept="application/x-git-receive-pack-result" Accept-Encoding="gzip" Host="codecampmobile.scm.azurewebsites.net" User-Agent="git/2.7.0" X-SITE-DEPLOYMENT-ID="codeCampMobile" >
+  <step title="RpcService.ReceivePack" date="2016-02-11T02:56:39.956" >
+    <step title="Assuming git repository at D:\home\site\repository" date="2016-02-11T02:56:39.967" /><!-- duration: 16ms -->
+    <step title="Assuming git repository at D:\home\site\repository" date="2016-02-11T02:56:40.017" /><!-- duration: 12ms -->
+    <step title="Creating temporary deployment" date="2016-02-11T02:56:41.121" /><!-- duration: 78ms -->
+    <step title="GitExeServer.Receive" date="2016-02-11T02:56:41.198" >
+      <step title="Executing external process" date="2016-02-11T02:56:41.214" type="process" path="git.exe" arguments="receive-pack --stateless-rpc &quot;D:\home\site\repository&quot;" /><!-- duration: 84974ms -->
+    </step><!-- duration: 85005ms -->
+  </step><!-- duration: 86347ms -->
+  <step title="Outgoing response" date="2016-02-11T02:58:06.318" type="response" statusCode="200" statusText="OK" Server="Microsoft-IIS/8.0" Expires="Fri, 01 Jan 1980 00:00:00 GMT" Pragma="no-cache" Cache-Control="no-cache, max-age=0, must-revalidate" X-AspNet-Version="4.0.30319" Content-Type="application/x-git-receive-pack-result" /><!-- duration: 0ms -->
+</step><!-- duration: 86398ms -->

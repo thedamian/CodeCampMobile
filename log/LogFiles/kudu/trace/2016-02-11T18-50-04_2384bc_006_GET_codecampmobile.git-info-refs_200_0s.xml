@@ -1,0 +1,14 @@
+<step title="Incoming Request" date="2016-02-11T18:50:04.190" instance="2384bc" url="/codecampmobile.git/info/refs?service=git-receive-pack" method="GET" type="request" pid="3040,2,31" Connection="Keep-Alive" Pragma="no-cache" Accept="*/*" Accept-Encoding="gzip" Host="codecampmobile.scm.azurewebsites.net" User-Agent="git/2.7.0" X-SITE-DEPLOYMENT-ID="codeCampMobile" >
+  <step title="Cleanup Xml Logs" date="2016-02-11T18:50:04.190" /><!-- duration: 19ms -->
+  <step title="InfoRefsService.Execute" date="2016-02-11T18:50:04.224" >
+    <step title="Assuming git repository at D:\home\site\repository" date="2016-02-11T18:50:04.256" /><!-- duration: 0ms -->
+    <step title="InfoRefsService.SmartInfoRefs" date="2016-02-11T18:50:04.271" >
+      <step title="Assuming git repository at D:\home\site\repository" date="2016-02-11T18:50:04.271" /><!-- duration: 16ms -->
+      <step title="GitExeServer.AdvertiseReceivePack" date="2016-02-11T18:50:04.287" >
+        <step title="Executing external process" date="2016-02-11T18:50:04.303" type="process" path="git.exe" arguments="receive-pack --stateless-rpc --advertise-refs &quot;D:\home\site\repository&quot;" /><!-- duration: 172ms -->
+      </step><!-- duration: 203ms -->
+      <step title="Writing 185 bytes" date="2016-02-11T18:50:04.506" /><!-- duration: 0ms -->
+    </step><!-- duration: 250ms -->
+  </step><!-- duration: 297ms -->
+  <step title="Outgoing response" date="2016-02-11T18:50:04.521" type="response" statusCode="200" statusText="OK" Server="Microsoft-IIS/8.0" x-ms-request-id="72d5528e-888b-4274-ad0a-9383185bce4b" Pragma="no-cache" Cache-Control="must-revalidate, no-cache, max-age=0" Expires="Tue, 01 Jan 1980 00:00:00 GMT" Content-Length="185" X-AspNet-Version="4.0.30319" Content-Type="application/x-git-receive-pack-advertisement" /><!-- duration: 16ms -->
+</step><!-- duration: 347ms -->

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<deployment>
+  <id>b9ba9a52206469a64379abd37151a5747ab2c8dd</id>
+  <author>Damian Montero</author>
+  <deployer>websocketdemo</deployer>
+  <authorEmail>photoca@hotmail.com</authorEmail>
+  <message>app redirect
+</message>
+  <progress></progress>
+  <status>Success</status>
+  <statusText></statusText>
+  <lastSuccessEndTime>2016-02-11T18:26:05.7194476Z</lastSuccessEndTime>
+  <receivedTime>2016-02-11T18:25:23.190147Z</receivedTime>
+  <startTime>2016-02-11T18:25:26.8710595Z</startTime>
+  <endTime>2016-02-11T18:26:05.7194476Z</endTime>
+  <complete>True</complete>
+  <is_temp>False</is_temp>
+  <is_readonly>False</is_readonly>
+</deployment>

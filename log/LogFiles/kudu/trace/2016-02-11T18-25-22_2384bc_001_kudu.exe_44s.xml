@@ -1,0 +1,23 @@
+<step title="Executing external process" date="2016-02-11T18:25:22.953" instance="2384bc" type="process" path="kudu.exe" arguments="D:\home\site C:\Program Files (x86)\SiteExtensions\Kudu\51.50119.2041\msbuild" >
+  <step title="Cleanup Xml Logs" date="2016-02-11T18:25:22.984" /><!-- duration: 16ms -->
+  <step title="DeploymentManager.Deploy(id)" date="2016-02-11T18:25:23.140" >
+    <step title="Collecting changeset information" date="2016-02-11T18:25:23.156" /><!-- duration: 78ms -->
+    <step title="Updating to specific changeset" date="2016-02-11T18:25:23.234" /><!-- duration: 3475ms -->
+    <step title="Updating submodules" date="2016-02-11T18:25:26.725" /><!-- duration: 78ms -->
+    <step title="Determining deployment builder" date="2016-02-11T18:25:26.907" >
+      <step title="Builder is NodeSiteBuilder" date="2016-02-11T18:25:32.635" /><!-- duration: 0ms -->
+    </step><!-- duration: 5743ms -->
+    <step title="Copying SSH keys" date="2016-02-11T18:25:32.683" /><!-- duration: 18ms -->
+    <step title="Building" date="2016-02-11T18:25:32.701" >
+      <step title="Generating deployment script" date="2016-02-11T18:25:32.810" >
+        <step title="Using cached version of the deployment script for command: -y --no-dot-deployment -r &quot;D:\home\site\repository&quot; -o &quot;D:\home\site\deployments\tools&quot; --node --sitePath &quot;D:\home\site\repository&quot;" date="2016-02-11T18:25:32.857" /><!-- duration: 16ms -->
+      </step><!-- duration: 94ms -->
+      <step title="Executing external process" date="2016-02-11T18:25:33.029" type="process" path="starter.cmd" arguments="&quot;D:\home\site\deployments\tools\deploy.cmd&quot;" /><!-- duration: 32462ms -->
+      <step title="Purge deployment items" date="2016-02-11T18:26:06.082" >
+        <step title="Remove acdc4041d, Success, received at 1/21/2016 8:45:17 PM" date="2016-02-11T18:26:06.145" /><!-- duration: 16ms -->
+      </step><!-- duration: 79ms -->
+    </step><!-- duration: 33506ms -->
+  </step><!-- duration: 43067ms -->
+  <step title="Cleaning up temp files" date="2016-02-11T18:26:06.207" /><!-- duration: 16ms -->
+  <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2016-02-11T18:26:06.270" /><!-- duration: 328ms -->
+</step><!-- duration: 43834ms -->

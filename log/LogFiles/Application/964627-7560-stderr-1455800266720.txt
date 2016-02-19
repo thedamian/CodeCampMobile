@@ -1,0 +1,11 @@
+Error: Can't set headers after they are sent.
+    at ServerResponse.OutgoingMessage.setHeader (_http_outgoing.js:341:11)
+    at ServerResponse.header (D:\home\site\wwwroot\node_modules\express\lib\response.js:718:10)
+    at ServerResponse.location (D:\home\site\wwwroot\node_modules\express\lib\response.js:835:8)
+    at ServerResponse.redirect (D:\home\site\wwwroot\node_modules\express\lib\response.js:874:8)
+    at D:\home\site\wwwroot\app.js:72:9
+    at Layer.handle [as handle_request] (D:\home\site\wwwroot\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\home\site\wwwroot\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (D:\home\site\wwwroot\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\home\site\wwwroot\node_modules\express\lib\router\layer.js:95:5)
+    at D:\home\site\wwwroot\node_modules\express\lib\router\index.js:277:22

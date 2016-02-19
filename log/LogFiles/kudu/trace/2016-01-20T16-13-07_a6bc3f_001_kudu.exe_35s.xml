@@ -1,0 +1,24 @@
+<step title="Executing external process" date="2016-01-20T16:13:07.540" instance="a6bc3f" type="process" path="kudu.exe" arguments="D:\home\site C:\Program Files (x86)\SiteExtensions\Kudu\51.50119.2041\msbuild" >
+  <step title="Cleanup Xml Logs" date="2016-01-20T16:13:07.676" /><!-- duration: 0ms -->
+  <step title="DeploymentManager.Deploy(id)" date="2016-01-20T16:13:07.821" >
+    <step title="Collecting changeset information" date="2016-01-20T16:13:07.832" /><!-- duration: 80ms -->
+    <step title="Updating to specific changeset" date="2016-01-20T16:13:07.912" /><!-- duration: 4778ms -->
+    <step title="Updating submodules" date="2016-01-20T16:13:12.691" /><!-- duration: 50ms -->
+    <step title="Determining deployment builder" date="2016-01-20T16:13:12.816" >
+      <step title="Builder is NodeSiteBuilder" date="2016-01-20T16:13:14.580" /><!-- duration: 16ms -->
+    </step><!-- duration: 1779ms -->
+    <step title="Copying SSH keys" date="2016-01-20T16:13:14.611" /><!-- duration: 21ms -->
+    <step title="Building" date="2016-01-20T16:13:14.632" >
+      <step title="Generating deployment script" date="2016-01-20T16:13:14.658" >
+        <step title="Executing external process" date="2016-01-20T16:13:14.944" type="process" path="starter.cmd" arguments="&quot;c:\Program Files (x86)\SiteExtensions\Kudu\51.50119.2041\bin\node_modules\.bin\kuduscript.cmd&quot; -y --no-dot-deployment -r &quot;D:\home\site\repository&quot; -o &quot;D:\home\site\deployments\tools&quot; --node --sitePath &quot;D:\home\site\repository&quot;" /><!-- duration: 640ms -->
+        <step title="Saved cached version of the deployment script for command -y --no-dot-deployment -r &quot;D:\home\site\repository&quot; -o &quot;D:\home\site\deployments\tools&quot; --node --sitePath &quot;D:\home\site\repository&quot;" date="2016-01-20T16:13:15.584" /><!-- duration: 0ms -->
+      </step><!-- duration: 926ms -->
+      <step title="Executing external process" date="2016-01-20T16:13:15.646" type="process" path="starter.cmd" arguments="&quot;D:\home\site\deployments\tools\deploy.cmd&quot;" /><!-- duration: 25682ms -->
+      <step title="Purge deployment items" date="2016-01-20T16:13:41.792" >
+        <step title="Remove 903ad4240, Success, received at 1/20/2016 3:36:23 AM" date="2016-01-20T16:13:41.851" /><!-- duration: 0ms -->
+      </step><!-- duration: 76ms -->
+    </step><!-- duration: 27254ms -->
+  </step><!-- duration: 34065ms -->
+  <step title="Cleaning up temp files" date="2016-01-20T16:13:41.886" /><!-- duration: 0ms -->
+  <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2016-01-20T16:13:41.902" /><!-- duration: 363ms -->
+</step><!-- duration: 34878ms -->

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<deployment>
+  <id>aabd73b0dead70bcdedb0438144c24cb0a632e2e</id>
+  <author>Damian Montero</author>
+  <deployer>websocketdemo</deployer>
+  <authorEmail>photoca@hotmail.com</authorEmail>
+  <message>windows phone fixed
+</message>
+  <progress></progress>
+  <status>Success</status>
+  <statusText></statusText>
+  <lastSuccessEndTime>2016-02-12T04:15:26.3526831Z</lastSuccessEndTime>
+  <receivedTime>2016-02-12T04:14:45.8909875Z</receivedTime>
+  <startTime>2016-02-12T04:14:49.4209082Z</startTime>
+  <endTime>2016-02-12T04:15:26.3526831Z</endTime>
+  <complete>True</complete>
+  <is_temp>False</is_temp>
+  <is_readonly>False</is_readonly>
+</deployment>
