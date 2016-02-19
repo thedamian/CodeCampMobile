@@ -1,8 +1,0 @@
-<step title="Incoming Request" date="2016-01-20T21:16:43.515" instance="a6bc3f" url="/codeCampMobile.git/git-upload-pack" method="POST" type="request" pid="7680,2,8" Connection="Keep-Alive" Content-Length="200" Content-Type="application/x-git-upload-pack-request" Accept="application/x-git-upload-pack-result" Accept-Encoding="gzip" Host="codecampmobile.scm.azurewebsites.net" User-Agent="git/2.6.1.windows.1" X-SITE-DEPLOYMENT-ID="codeCampMobile" >
-  <step title="RpcService.UploadPackHandler" date="2016-01-20T21:16:43.531" >
-    <step title="GitExeServer.Upload" date="2016-01-20T21:16:43.531" >
-      <step title="Executing external process" date="2016-01-20T21:16:43.551" type="process" path="git.exe" arguments="upload-pack --stateless-rpc &quot;D:\home\site\repository&quot;" /><!-- duration: 55978ms -->
-    </step><!-- duration: 56009ms -->
-  </step><!-- duration: 56009ms -->
-  <step title="Outgoing response" date="2016-01-20T21:17:39.540" type="response" statusCode="200" statusText="OK" Server="Microsoft-IIS/8.0" Expires="Fri, 01 Jan 1980 00:00:00 GMT" Pragma="no-cache" Cache-Control="no-cache, max-age=0, must-revalidate" X-AspNet-Version="4.0.30319" Content-Type="application/x-git-upload-pack-result" /><!-- duration: 16ms -->
-</step><!-- duration: 56041ms -->

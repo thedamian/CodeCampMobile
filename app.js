@@ -42,9 +42,11 @@ app.get('/app',function(req,res) {
   res.redirect('/');
 });
 
+/*
 app.get('/',function(req,res) {
   checkForMobilePlatform(req,res);
 });
+*/
 
 function checkForMobilePlatform(req,res) {
   var ua = req.headers['user-agent'];
