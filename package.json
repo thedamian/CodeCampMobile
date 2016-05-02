@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "The South Florica Code Camp Mobile App / Website",
   "main": "app.js",
+  "engines":{"node": "^5.9.1"},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,9 +20,7 @@
   "author": "Damian Montero",
   "license": "ISC",
   "dependencies": {
-    "node": "^4.9.1",
     "express": "^4.13.4",
-    "html": "^0.0.10",
     "request": "^2.72.0",
     "pusher": "^1.2.1",
     "body-parser": "^1.15.0",
