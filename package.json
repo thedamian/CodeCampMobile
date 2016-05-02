@@ -17,5 +17,13 @@
     "camp"
   ],
   "author": "Damian Montero",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "html": "^0.0.10",
+    "request": "^2.72.0",
+    "pusher": "^1.2.1",
+    "body-parser": "^1.15.0",
+    "android-gcm": "^0.1.5"
+  }
 }

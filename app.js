@@ -3,8 +3,9 @@ var Pusher = require('pusher');
 var bodyParser = require('body-parser');
 //var azure = require('azure');
 var gcm = require('android-gcm');
-var express = require("express")
-var app = express()
+var express = require("express");
+var request = require('request');
+var app = express();
 var port = process.env.PORT || 5000
 
 var gcmObject = new gcm.AndroidGcm('AIzaSyAmD7bA9DzzNlwqEiFCFxlrC5vtB4yuz3k');
@@ -47,6 +48,19 @@ app.get('/',function(req,res) {
   checkForMobilePlatform(req,res);
 });
 */
+
+
+app.get('/api',function(req,res) {
+    //request.pipe(request.get('http://www.fladotnet.com/flanetdata/api/ccconsolidated'));
+    request
+  .get('http://www.fladotnet.com/flanetdata/api/ccconsolidated')
+  .on('response', function(response) {
+    // console.log(response.statusCode) // 200 
+    // console.log(response.headers['content-type']) // 'image/png' 
+  })
+  .pipe(res)
+});
+
 
 function checkForMobilePlatform(req,res) {
   var ua = req.headers['user-agent'];
