@@ -1,5 +1,5 @@
 var http = require("http")
-var Pusher = require('pusher');
+//var Pusher = require('pusher');
 var bodyParser = require('body-parser');
 //var azure = require('azure');
 var gcm = require('android-gcm');
@@ -8,7 +8,7 @@ var request = require('request');
 var app = express();
 var port = process.env.PORT || 5000
 
-var gcmObject = new gcm.AndroidGcm('AIzaSyAmD7bA9DzzNlwqEiFCFxlrC5vtB4yuz3k');
+var gcmObject = new gcm.AndroidGcm('AIzaSyBKEk231bdju1rWfilzrp_h-8qO35B9SaY');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -21,14 +21,14 @@ app.use(function(req, res, next) {
 });
 
 
-// Notification setups
-var pusher = new Pusher({
-  appId: '162454',
-  key: '559173cd02fac2d899db',
-  secret: '2fb3a65bd8aeae44d394',
-  encrypted: true
-});
-pusher.port = 443;
+// // Notification setups
+// var pusher = new Pusher({
+//   appId: '162454',
+//   key: '559173cd02fac2d899db',
+//   secret: '2fb3a65bd8aeae44d394',
+//   encrypted: true
+// });
+// pusher.port = 443;
 
 // var notificationHubService = azure.createNotificationHubService('CodeCampNotification','Endpoint=sb://codecampfl.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=N1jKdt95BAAnHTslUsaeAXyne9gtg4BMdh6gVzMK++8=');
 
@@ -98,21 +98,36 @@ function checkForMobilePlatform(req,res) {
 
 // Form posts
 app.post("/api/PushTest",function(req,res) {
-   pusher.trigger('test_channel', 'my_event', {
-  "message": req.body.message,
-  "title": req.body.title
-  }); 
-   
-   var message = new gcm.Message({
+  //  pusher.trigger('test_channel', 'my_event', {
+  // "message": req.body.message,
+  // "title": req.body.title
+  // }); 
+    
+    var message = new gcm.Message({
+    registration_ids: ['fkMlq1U1gpY:APA91bH-IkVdhAfA38UXT1FldRuOF2cVVFS7f50634FMimkZ8JJyaju5AzIt2FTe7y30qLRZCzOq0zTp2Zm7WU9gWlg_PS1Ir28whEYAjc8Vui8lDeKr6VpuNNa0F-Xtw3rL7tEO8H4I'],
+    
     data: {
         message: req.body.message,
         title: req.body.title
-    }
-    }); 
-gcmObject.send(message, function(GcmError, GcmResponse) {});
+       }
+    });
+    
+    gcmObject.send(message, function(err, response) {
+    
+    
+     if (!err) {
+        res.send("Success"+JSON.stringify(response));
+      } else {
+        res.send(err);
+      }
+      res.end();
+      
+    });
+
+
+
   
-  res.send("Success. We sent everyone the notification.");
-  res.end(); // end the response
+   // end the response
 });
 
 function GcmError() {
