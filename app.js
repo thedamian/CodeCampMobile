@@ -146,10 +146,16 @@ app.get('/api/NewPush',function(req,res) { // /api/NewPush?id=123
     // send mail with defined transport object
     transporter.sendMail(mailOptions, function(error, info){
         if(error){
+            res.send("Error: " + error);
+            res.end();
             return console.log(error);
         }
         console.log('Message sent: ' + info.response);
+        res.send("Ok");
+        res.end();
     });
+    
+    
 
 });    
     
