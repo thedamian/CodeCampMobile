@@ -104,7 +104,7 @@ app.post("/api/PushTest",function(req,res) {
   // }); 
     
     var message = new gcm.Message({
-    registration_ids: ['fkMlq1U1gpY:APA91bH-IkVdhAfA38UXT1FldRuOF2cVVFS7f50634FMimkZ8JJyaju5AzIt2FTe7y30qLRZCzOq0zTp2Zm7WU9gWlg_PS1Ir28whEYAjc8Vui8lDeKr6VpuNNa0F-Xtw3rL7tEO8H4I'],
+    registration_ids: ['fkMlq1U1gpY:APA91bH-IkVdhAfA38UXT1FldRuOF2cVVFS7f50634FMimkZ8JJyaju5AzIt2FTe7y30qLRZCzOq0zTp2Zm7WU9gWlg_PS1Ir28whEYAjc8Vui8lDeKr6VpuNNa0F-Xtw3rL7tEO8H4I','ci3eKVas3mU:APA91bEzOnnKvW3SCCUgt9tIKAju7JDihuVVpOOtzqKJ5H7JLfMu_ht3F638wXb5ZVEsL3mznOdoTTaH9_YbPt7hYOYZtXQqzmMozenOSpq3s_sUMQSfyXxPeettm18joKJV1IY2Regt'],
     
     data: {
         message: req.body.message,
