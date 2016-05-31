@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var gcm = require('android-gcm');
 var express = require("express");
 var request = require('request');
+var nodemailer = require('nodemailer');
 var app = express();
 var port = process.env.PORT || 5000
 
@@ -123,12 +124,42 @@ app.post("/api/PushTest",function(req,res) {
       res.end();
       
     });
-
-
-
   
    // end the response
 });
+
+app.get('/api/NewPush',function(req,res) { // /api/NewPush?id=123
+    var id = req.query.id;
+    
+    // create reusable transporter object using the default SMTP transport
+    var transporter = nodemailer.createTransport('smtps://damianmontero%40gmail.com:Lily4321@smtp.gmail.com');
+
+    // setup e-mail data with unicode symbols
+    var mailOptions = {
+        from: '"Damian Montero" <damianmontero@gmail.com>', // sender address
+        to: 'damianmontero@gmail.com', // list of receivers
+        subject: 'Notification added', // Subject line
+        text: 'New notification registration of: '+ id, // plaintext body
+        html: '<b>New notification registration of: '+ id+' </b>' // html body
+    };
+
+    // send mail with defined transport object
+    transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+            res.send("Error: " + error);
+            res.end();
+            return console.log(error);
+        }
+        console.log('Message sent: ' + info.response);
+        res.send("Ok");
+        res.end();
+    });
+    
+    
+
+});    
+    
+
 
 function GcmError() {
     console.log("error");
