@@ -24,7 +24,7 @@ var TimeSlotsObj = [
       
         $.ajax({
             type: "GET",
-            url: "http://crossorigin.me/http://www.fladotnet.com/flanetdata/api/ccconsolidated",
+            url: "http://codecampmobile.azurewebsites.net/api",
             cache: false,
             dataType: "xml",
             success: function(xml) {

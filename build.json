@@ -1,0 +1,12 @@
+{
+    "windows": {
+        "debug": {
+            "packageCertificateKeyFile": "platforms\\windows\\CordovaApp_TemporaryKey.pfx"
+        },
+        "release": {
+            "packageCertificateKeyFile": "c:\\path-to-key\\keycert.pfx",
+            "packageThumbprint": "ABCABCABCABC123123123123",
+            "publisherId": "CN=FakeCorp.com, L=Redmond, S=Washington, C=US"
+        }
+    }
+}

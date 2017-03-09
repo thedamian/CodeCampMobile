@@ -53,6 +53,8 @@ angular.module('starter.controllers', [])
           $RoomNumber = $(this).find("RoomNumber").text().trim();
           $SessionTrack = $RoomName.substr(0,($RoomName.indexOf("Room")-1)).trim();
           
+          if ( ($SessionName != "Registration") && ($SessionName != "Keynote")  && ($SessionName != "Lunch Break") ) {
+
           if ($SessionTrack.indexOf("/") ==  ($SessionTrack.length-1))
           { // clean up
             $SessionTrack = $SessionTrack.substr(0,$SessionTrack.length-2);
@@ -96,6 +98,7 @@ angular.module('starter.controllers', [])
               TimeSlotText: TimeSlotsObj[TimeSlotsObj.map(function(e) { return e.TimeSlotID}).indexOf($TimeSlotID)].TimeShow
             });
            
+          } // If it's not the repeated events.
             
          }); // find each CCConsolidated
            SessionsObj = sessionObj;

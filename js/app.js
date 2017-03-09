@@ -114,25 +114,3 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 }]);
 
-    /*
-    // Enable pusher logging - don't include this in production
-    Pusher.log = function(message) {
-      if (window.console && window.console.log) {
-        window.console.log(message);
-      }
-    };
-
-    var pusher = new Pusher('559173cd02fac2d899db', {
-      encrypted: true
-    });
-    
-    
-    var channel = pusher.subscribe('test_channel');
-    channel.bind('my_event', function(data) {
-        alert(data.title + "\n" + data.message);
-        //  $ionicPopup.alert({
-        //     title: data.title,
-        //    template: data.message
-        //  });
-    });
-    */
