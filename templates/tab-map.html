@@ -5,7 +5,7 @@
         overflow: scroll;
       }
       #floorsplanmap {
-        width:200%;
+        zoom:200%;
       }
     </style>
     <center>
@@ -22,9 +22,9 @@
     Floor 4
     </button>
     </center>
-    <ion-scroll zooming="true" direction="xy">
+    <ion-scroll zooming="true" direction="xy" style="width: 500px; height: 500px">
     <div id="floorsplan">
-      <img id="floorsplanmap"  src="maps\Floor{{floor}}.png">
+      <img id="floorsplanmap"  src="maps\Floor{{floor}}.png" style="width: 500px; height: 500px">
     </div>
     </ion-scroll>
   </ion-content>
