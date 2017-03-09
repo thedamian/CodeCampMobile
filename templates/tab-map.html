@@ -1,9 +1,21 @@
 <ion-view view-title="Map">
   <ion-content>
-
-<ion-scroll zooming="true" direction="xy" style="width: 500px; height: 500px">
-  <div style="width: 5000px; height: 5000px; background: url('https://upload.wikimedia.org/wikipedia/commons/a/ad/Europe_geological_map-en.jpg') repeat"></div>
- </ion-scroll>
-
+    <ion-scroll zooming="true" direction="xy" style="width: 500px; height: 500px">
+        <center>
+          <button class="button button-dark mapButton" id="1" ng-click="clickFloor(1)">
+            Floor 1
+          </button>
+          <button class="button button-dark mapButton" id="2" ng-click="clickFloor(2)"> 
+            Floor 2
+          </button>
+          <button class="button button-dark mapButton" id="3" ng-click="clickFloor(3)">
+            Floor 3
+          </button>
+          <button  class="button button-dark mapButton" id="4" ng-click="clickFloor(4)">
+          Floor 4
+          </button>
+        </center>
+        <img id="floorsplanmap"  src="maps\Floor{{floor}}.png" style="zoom:200%;">
+    </ion-scroll>
   </ion-content>
 </ion-view>
