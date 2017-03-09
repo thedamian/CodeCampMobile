@@ -1,13 +1,13 @@
 <ion-view view-title="Map">
   <ion-content>
-    <ion-scroll zooming="true"  direction="xy">
+    <ion-scroll zooming="true"  direction="xy" style="width:512px;height:512px">
       <style>
         #bigmap {
         overflow-y: scroll; /* has to be scroll, not auto */
         -webkit-overflow-scrolling: touch;
         }
       </style>
-      <div style="height:2048px;width:2048px;" id="bigmap">
+      <div style="height:2048px;width:2048px;overflow-y:scroll;" id="bigmap">
         <center>
           <button class="button button-dark mapButton" id="1" ng-click="clickFloor(1)">
             Floor 1
