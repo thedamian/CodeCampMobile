@@ -1,12 +1,8 @@
 <ion-view view-title="Map">
   <ion-content delegate-handle="mainScroll">
-    <ion-scroll width="500px; height: 500px" direction="xy">
-      <img style="width: 1024px; height: 1024px" src="maps\Floor1.png">
-      </ion-scroll>
-
-      <!--
-  <ion-scroll direction="xy" style="width: 1024px; height: 1024px">
-    <center>
+    <ion-scroll direction="xy">
+      <div style="height:1024px;">
+      <center>
       <button class="button button-dark mapButton" id="1" ng-click="clickFloor(1)">
         Floor 1
       </button>
@@ -20,8 +16,8 @@
       Floor 4
       </button>
     </center>
-      <img id="floorsplanmap"  src="maps\Floor{{floor}}.png">
+      <img id="floorsplanmap"  src="maps\Floor{{floor}}.png" style="width: 1024px; height: 1024px">
+      </div>
     </ion-scroll>
-    -->
   </ion-content>
 </ion-view>
