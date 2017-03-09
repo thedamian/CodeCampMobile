@@ -1,22 +1,28 @@
 <ion-view view-title="Map">
-  <ion-content delegate-handle="mainScroll">
-    <ion-scroll direction="xy">
-      <div style="height:2048px;">
-      <center>
-      <button class="button button-dark mapButton" id="1" ng-click="clickFloor(1)">
-        Floor 1
-      </button>
-      <button class="button button-dark mapButton" id="2" ng-click="clickFloor(2)"> 
-        Floor 2
-      </button>
-      <button class="button button-dark mapButton" id="3" ng-click="clickFloor(3)">
-        Floor 3
-      </button>
-      <button  class="button button-dark mapButton" id="4" ng-click="clickFloor(4)">
-      Floor 4
-      </button>
-    </center>
-      <img id="floorsplanmap"  src="maps\Floor{{floor}}.png" style="zoom:200%;">
+  <ion-content>
+    <ion-scroll zooming="true"  direction="xy">
+      <style>
+        #bigmap {
+        overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
+        }
+      </style>
+      <div style="height:2048px;width:2048px;" id="bigmap">
+        <center>
+          <button class="button button-dark mapButton" id="1" ng-click="clickFloor(1)">
+            Floor 1
+          </button>
+          <button class="button button-dark mapButton" id="2" ng-click="clickFloor(2)"> 
+            Floor 2
+          </button>
+          <button class="button button-dark mapButton" id="3" ng-click="clickFloor(3)">
+            Floor 3
+          </button>
+          <button  class="button button-dark mapButton" id="4" ng-click="clickFloor(4)">
+          Floor 4
+          </button>
+        </center>
+        <img id="floorsplanmap"  src="maps\Floor{{floor}}.png" style="zoom:200%;">
       </div>
     </ion-scroll>
   </ion-content>
