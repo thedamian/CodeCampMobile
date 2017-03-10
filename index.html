@@ -22,14 +22,7 @@
     <!-- iPhone 5 -- >
     <link href="http://codecampmobile.azurewebsites.net/www/images/splash-750x1294.png" sizes="568x320" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
     -->
-    <script>
-      function triggerMouseEvent(type, ele, x, y) {
-      var clickEvent = document.createEvent("MouseEvents");
-      clickEvent.initMouseEvent(type, true, true, window, 1, 0, 0, x, y, false, false, false, false, 0, null);
-      clickEvent.isIonicTap = true;
-      ele.dispatchEvent(clickEvent); // (line 2865)
-    }
-</script>
+
    
     <script src="/lib/jquery-1.11.3.min.js"></script>
         <!-- ionic/angularjs js -->
