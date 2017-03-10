@@ -17,10 +17,23 @@ var TimeSlotsObj = [
 
 angular.module('starter.controllers', [])
 
-.controller('ScheduleCtrl', function($rootScope,$scope,$http,Sessions,$ionicPopup) {
+.controller('ScheduleCtrl', function($rootScope,$scope,$http,Sessions,$ionicPopup,$window) {
   $scope.sessions = [];
   $scope.speakers = [];
   $scope.sessionTracks = [];
+
+
+  var initialRun  = ($window.localStorage["initialRun"]==undefined ? "true" : "false");
+  $window.localStorage["initialRun"] = initialRun;
+
+if (initialRun == "true")
+{
+   $ionicPopup.alert({
+       title: 'Make it an App',
+       template: 'Click MENU on your browser then "Add to Home Page"'
+      });
+  console.log("new");
+}
 
   
  $scope.bookmark = function(thisSessionID) {
