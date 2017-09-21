@@ -88,10 +88,10 @@ function checkForMobilePlatform(req,res) {
 
     // iOS
     if (/iPhone/.test(ua))
-        res.redirect('https://itunes.apple.com/us/app/south-florida-code-camp/id1070282332?ls=1&mt=8');
+        res.redirect('https://itunes.apple.com/us/app/south-florida-code-camp/id1070282332?mt=8');
     
     if (/iPad/.test(ua))
-        res.redirect('https://itunes.apple.com/us/app/south-florida-code-camp/id1070282332?ls=1&mt=8');    
+        res.redirect('https://itunes.apple.com/us/app/south-florida-code-camp/id1070282332?mt=8');    
 
 }
 
