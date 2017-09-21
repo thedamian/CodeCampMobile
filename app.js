@@ -83,8 +83,8 @@ function checkForMobilePlatform(req,res) {
 
     //Android
     if (/Android/.test(ua))
-        //res.redirect('https://play.google.com/store/apps/details?id=com.threeguys1phone.codecampsfl');
-        res.redirect('market://details?id=com.threeguys1phone.codecampfl');
+        res.redirect('http://play.google.com/store/apps/details?id=com.threeguys1phone.codecampfl');
+        //res.redirect('market://details?id=com.threeguys1phone.codecampfl');
 
     // iOS
     if (/iPhone/.test(ua))
