@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.threeguys1phone.codecampfl" version="2.0.17" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.threeguys1phone.codecampfl" version="2.0.185"  android-versionCode="20185"   xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Code Camp Mobile</name>
   <description>
         Florida Code Camp: See the Schedule Speakers and all information you need for the 2016 South Florida Code Camp
     </description>
-  <author email="support@monedllc.com" href="http://monedllc.com/">3 Guys 1 Phone</author>
+  <author email="support@monedllc.com" href="http://monedllc.com/">Moned</author>
   <content src="index.html"/>
   <access origin="*"/>
+  <preference name="android-targetSdkVersion" value="19"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
