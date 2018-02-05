@@ -24,7 +24,8 @@ angular.module('starter.controllers', [])
   $scope.sessionTracks = [];
   $scope.sponsors = [];
 
-
+/*
+// For website only
   var initialRun  = ($window.localStorage["initialRun"]==undefined ? "true" : "false");
   $window.localStorage["initialRun"] = initialRun;
 
@@ -36,7 +37,7 @@ if (initialRun == "true")
       });
   console.log("new");
 }
-
+*/
 
  $scope.bookmark = function(thisSessionID) {
      $ionicPopup.alert({
