@@ -14,7 +14,7 @@ angular.module('starter.services', [])
 return {
   getSessions : function() {
     return $http({
-      url: "http://codecampmobile.azurewebsites.net/api",
+      url: "https://codecampmobile.azurewebsites.net/api",
       dataType: "xml",
       method: 'GET'
     }) // return $http
