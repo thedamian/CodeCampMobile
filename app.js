@@ -50,6 +50,17 @@ app.get('/',function(req,res) {
 });
 */
 
+app.get('/api/sponsors',function(req,res) {
+    //request.pipe(request.get('http://www.fladotnet.com/flanetdata/api/ccconsolidated'));
+    request
+  .get('http://www.fladotnet.com/flanetdata/api/ccsponsors')
+  .on('response', function(response) {
+    // console.log(response.statusCode) // 200 
+    // console.log(response.headers['content-type']) // 'image/png' 
+  })
+  .pipe(res)
+});
+
 
 app.get('/api',function(req,res) {
     //request.pipe(request.get('http://www.fladotnet.com/flanetdata/api/ccconsolidated'));
