@@ -21,9 +21,11 @@
       </label>
   
   </div>
+  <div id="loading" style="display:block;z-index:10; top:300px; margin: 0 auto;font-size:2em;">Loading...</div>
+
   <ion-refresher
     pulling-text="Pull to refresh..."
-    on-refresh="parseDate()">
+    on-refresh="parseSessions()">
         </ion-refresher>
       <ion-list spinner="true" sliding="true"> 
       <ion-item class="item-remove-animate item-avatar item-icon-right" 
@@ -44,9 +46,7 @@
         
       </ion-item>
     </ion-list>
-    <div id="loading">
-    <BR><BR><BR>Loading...
-  </div>
+
   
 
 

@@ -1,5 +1,6 @@
 var SessionsObj = [];
 var SpeakersObj = [];
+var SponsorsObj = [];
 var TimeSlotsObj = [
                     {TimeSlotID:'',TimeShow:"Any Time"},
                     {TimeSlotID:'1',TimeShow:"7:30 - Registration"},
@@ -21,6 +22,7 @@ angular.module('starter.controllers', [])
   $scope.sessions = [];
   $scope.speakers = [];
   $scope.sessionTracks = [];
+  $scope.sponsors = [];
 
 
   var initialRun  = ($window.localStorage["initialRun"]==undefined ? "true" : "false");
@@ -30,12 +32,12 @@ if (initialRun == "true")
 {
    $ionicPopup.alert({
        title: 'Make it an App',
-       template: 'Click MENU on your browser then "Add to Home Page"'
+       template: 'Click MENU on your browser then "Add to Home Page" to make this a PWA'
       });
   console.log("new");
 }
 
-  
+
  $scope.bookmark = function(thisSessionID) {
      $ionicPopup.alert({
        title: 'This Functionality isn\'t ready',
@@ -44,8 +46,7 @@ if (initialRun == "true")
    };
    
   
-  $scope.parseDate = function() {
-    $("#loading").show();
+  $scope.parseSessions = function() {
     Sessions.getSessions().success( function(data) {
       var sessionObj = [];
       var SessionTracks = [''];
@@ -66,7 +67,7 @@ if (initialRun == "true")
           $RoomNumber = $(this).find("RoomNumber").text().trim();
           $SessionTrack = $RoomName.substr(0,($RoomName.indexOf("Room")-1)).trim();
           
-          if ( ($SessionName != "Registration") && ($SessionName != "Keynote")  && ($SessionName != "Lunch Break") ) {
+          if ( ($SessionName != "Registration") && ($SessionName != "Keynote")  && ($SessionName != "Lunch Break")  && ($SessionName != "TBD")  ) {
 
           if ($SessionTrack.indexOf("/") ==  ($SessionTrack.length-1))
           { // clean up
@@ -94,7 +95,7 @@ if (initialRun == "true")
               face:$SpeakerImage 
             });
           }
-          
+ 
         sessionObj.push({
               SessionID:$SessionID,
               SessionStart:$SessionStart,
@@ -110,10 +111,33 @@ if (initialRun == "true")
               TimeSlotID: $TimeSlotID,
               TimeSlotText: TimeSlotsObj[TimeSlotsObj.map(function(e) { return e.TimeSlotID}).indexOf($TimeSlotID)].TimeShow
             });
-           
+
           } // If it's not the repeated events.
             
          }); // find each CCConsolidated
+
+
+         Sessions.getSponsors().success( function(data) {
+             $(data).find("CCSponsor").each(function () {
+                $SponsorID = $(this).find("SponsorID").text().trim(); 
+                $SponsorTypeName = $(this).find("SponsorTypeName").text().trim(); 
+                $SponsorName = $(this).find("SponsorName").text().trim(); 
+                $SponsorURL = $(this).find("SponsorURL").text().trim(); 
+                $SponsorLogo = $(this).find("SponsorLogo").text().trim(); 
+                SponsorsObj.push({
+                  SponsorID:$SponsorID,
+                  SponsorTypeName:$SponsorTypeName,
+                  SponsorName:$SponsorName,
+                  SponsorURL:$SponsorURL,
+                  SponsorLogo:$SponsorLogo
+                  }
+                )
+             });
+          });
+            
+
+
+           $scope.sponsors = SponsorsObj;
            SessionsObj = sessionObj;
            $scope.sessions = sessionObj;
            SpeakersObj = Speakers;
@@ -132,7 +156,7 @@ if (initialRun == "true")
      });
   }
   
-  $scope.parseDate();
+  $scope.parseSessions();
   
   
    
@@ -186,7 +210,7 @@ if (initialRun == "true")
 
 })
 .controller('sponsorsCtrl',function($scope) {
-  
+  $scope.sponsors = SponsorsObj;
 });
 
 

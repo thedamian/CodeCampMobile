@@ -19,6 +19,14 @@ return {
       method: 'GET'
     }) // return $http
   }, //getSession
+  getSponsors : function() {
+    return $http({
+      url: "http://codecampmobile.azurewebsites.net/api/sponsors",
+      dataType: "xml",
+      method: 'GET'
+    }) // return $http
+  }, //getSession
+
   get : function(sessionsArr,sessionID)
   {
    return sessionsArr[sessionsArr.map(function(e) { return e.SessionID}).indexOf(sessionID)];
