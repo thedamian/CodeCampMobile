@@ -26,7 +26,8 @@ angular.module('starter.controllers', [])
 
 
 // For website only
-  var initialRun  = ($window.localStorage["initialRun"]==undefined ? "true" : "false");
+/*
+var initialRun  = ($window.localStorage["initialRun"]==undefined ? "true" : "false");
   $window.localStorage["initialRun"] = initialRun;
 
 if (initialRun == "true")
@@ -37,6 +38,7 @@ if (initialRun == "true")
       });
   console.log("new");
 }
+*/
 
  $scope.bookmark = function(thisSessionID) {
      $ionicPopup.alert({
