@@ -26,7 +26,6 @@ angular.module('starter.controllers', [])
 
 
 // For website only
-/*
 var initialRun  = ($window.localStorage["initialRun"]==undefined ? "true" : "false");
   $window.localStorage["initialRun"] = initialRun;
 
@@ -34,11 +33,11 @@ if (initialRun == "true")
 {
    $ionicPopup.alert({
        title: 'Make it an App',
-       template: 'Click MENU on your browser then "Add to Home Page" to make this a PWA'
+       template: 'Click MENU (or 🖾 ) on your browser then "Add to Home Page" to make this an App!'
       });
-  console.log("new");
+  //console.log("new");
 }
-*/
+
 
  $scope.bookmark = function(thisSessionID) {
      $ionicPopup.alert({
