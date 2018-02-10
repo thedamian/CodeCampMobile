@@ -91,14 +91,14 @@ function checkForMobilePlatform(req,res) {
        if (!(/BB10/.test(ua)))
         res.redirect('/bb');
     }
-
+/*
     //Android
     if ( (/Android/.test(ua)) && (!(/Microsoft/.test(ua)))  )
     {
         res.redirect('http://play.google.com/store/apps/details?id=com.threeguys1phone.codecampfl');
         //res.redirect('market://details?id=com.threeguys1phone.codecampfl');
     }
-
+*/
     /*
     // iOS
     if (/iPhone/.test(ua))
