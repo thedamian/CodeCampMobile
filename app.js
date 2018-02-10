@@ -99,13 +99,14 @@ function checkForMobilePlatform(req,res) {
         //res.redirect('market://details?id=com.threeguys1phone.codecampfl');
     }
 
+    /*
     // iOS
     if (/iPhone/.test(ua))
         res.redirect('https://itunes.apple.com/us/app/south-florida-code-camp/id1070282332?mt=8');
     
     if (/iPad/.test(ua))
         res.redirect('https://itunes.apple.com/us/app/south-florida-code-camp/id1070282332?mt=8');    
-
+    */
 }
 
 // Form posts
