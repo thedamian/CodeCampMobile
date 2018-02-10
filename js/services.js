@@ -21,7 +21,7 @@ return {
   }, //getSession
   getSponsors : function() {
     return $http({
-      url: "http://codecampmobile.azurewebsites.net/api/sponsors",
+      url: "https://codecampmobile.azurewebsites.net/api/sponsors",
       dataType: "xml",
       method: 'GET'
     }) // return $http
