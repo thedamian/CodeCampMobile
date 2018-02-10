@@ -24,7 +24,7 @@ angular.module('starter.controllers', [])
   $scope.sessionTracks = [];
   $scope.sponsors = [];
 
-
+/*
 // For website only
 var initialRun  = ($window.localStorage["initialRun"]==undefined ? "true" : "false");
   $window.localStorage["initialRun"] = initialRun;
@@ -35,8 +35,8 @@ if (initialRun == "true")
        title: 'Make it an App',
        template: 'Click MENU (or 🖾 ) on your browser then "Add to Home Page" to make this an App!'
       });
-  //console.log("new");
 }
+*/
 
 
  $scope.bookmark = function(thisSessionID) {
